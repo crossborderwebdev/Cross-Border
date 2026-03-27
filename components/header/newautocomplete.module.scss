@@ -1,0 +1,234 @@
+.autocomplete {
+    align-self: center;
+    width: 100%;
+    position: relative;
+}
+
+.aa-Panel {
+    display: none; // Remove this when you want autocomplete
+    z-index: 10000 !important;
+    box-shadow: 0 1.25rem 1.875rem rgba(0, 0, 0, 0.08);
+    border-radius: 0 !important;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+
+    &.full-width {
+        display: block;
+    }
+}
+
+.aa-Item {
+    p:first-of-type {
+        font-size: 1rem;
+        color: #981239;
+        font-weight: 600;
+        line-height: 140%;
+        margin-bottom: 0.125rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+        color: #000;
+        font-weight: 400;
+        line-height: 140%;
+        margin-bottom: 0.125rem;
+    }
+
+    p:last-of-type {
+        font-size: 1rem;
+        color: #6b6166;
+        font-weight: 600;
+        line-height: 140%;
+    }
+
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.aa-Footer {
+    font-size: 1.125rem;
+    margin-top: 3.25rem;
+    margin-bottom: 2.25rem;
+
+    A {
+        color: #be1549;
+        text-decoration: underline;
+    }
+}
+
+.aa-SubmitButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aa-SubmitButton,
+.aa-DetachedSearchButtonIcon {
+    SVG {
+        margin-left: 0;
+        color: #6b6166;
+        width: 1.125rem;
+        height: 1.125rem;
+    }
+}
+
+.aa-InputWrapperSuffix {
+    display: none;
+}
+
+.aa-InputWrapper {
+    order: 1;
+    position: static;
+    padding-left: 10px;
+
+    ::placeholder {
+        color: #6b6166;
+    }
+
+    @media (max-width: 1200px) {
+        ::placeholder {
+            color: #fff;
+        }
+    }
+}
+
+.aa-InputWrapperPrefix {
+    order: 2;
+    box-shadow: none !important;
+
+    SVG {
+        margin-left: 0;
+        color: #6b6166;
+        width: 1.125rem;
+        height: 1.125rem;
+    }
+}
+
+.aa-Form {
+    border: 0;
+    box-shadow: none !important;
+    border-radius: 8px;
+    // padding-left: 1.5rem;
+    // padding-right: 1.5rem;
+    // position: static;
+
+    .extend {
+        width: 0;
+        padding: 8px 0;
+        border: 0;
+        border-bottom: 0.063rem solid #e6e8e7;
+        border-radius: 0;
+        box-shadow: none;
+        font-size: 1rem;
+        // -webkit-transition: width 0.4s ease-in-out;
+        // transition: width 0.4s ease-in-out;
+        cursor: pointer;
+        // position: absolute;
+        // left: 0;
+        // right: 0;
+        // bottom: 0;
+
+        @media (max-width:1200px) {
+            border-bottom: none;
+        }
+    }
+
+    .extend:focus,
+    .extend:active {
+        width: 100%;
+        cursor: text;
+        background: #fff;
+        outline: none;
+
+        @media (max-width: 768px) {
+            width: 17.5rem;
+        }
+    }
+
+    .aa-BorderBottom {
+        border-bottom: 0.063rem solid #e6e8e7;
+        border-radius: 0;
+    }
+
+    &.darkBg {
+        background-color: transparent;
+
+        .extend {
+            padding: 8px;
+            border-bottom: 0;
+        }
+
+        .aa-BorderBottom {
+            border-bottom: 0;
+        }
+    }
+}
+
+.aa-Label {
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+}
+
+/* Plain search style */
+.aa-Pagination {
+    UL {
+        display: inline-block;
+    }
+
+    SPAN {
+        border: 0;
+        background: #fff;
+        background-image: none !important;
+    }
+
+    A {
+        border: 0;
+        box-shadow: none;
+        box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+    }
+
+    A:hover {
+        background-image: none !important;
+    }
+
+    A:active,
+    A:focus {
+        color: #be1549;
+        font-weight: 800;
+    }
+}
+
+.aa-SearchBox {
+    INPUT {
+        box-shadow: none;
+        border: 0;
+        border-bottom: 1px solid #e6e8e7;
+        border-radius: 0;
+        padding-left: 0.5rem;
+    }
+
+    FORM:before {
+        left: inherit !important;
+        right: 0.5rem !important;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b6166' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+    }
+
+    INPUT:focus {
+        border-bottom: 1px solid #be1549;
+    }
+
+    BUTTON:last-of-type {
+        display: none;
+    }
+}
+
+.aa-Items {
+    padding: 0.5rem;
+
+    @media (max-width: 768px) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

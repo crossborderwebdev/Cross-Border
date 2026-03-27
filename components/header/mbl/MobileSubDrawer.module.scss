@@ -1,0 +1,121 @@
+.subDrawerWrapper {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    background: #F7F6F5;
+}
+
+.backBtn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1a1a1a;
+    padding: 16px 10px;
+    cursor: pointer;
+
+    .backIcon {
+        transform: rotate(180deg);
+        filter: brightness(0);
+        width: 7px;
+        height: 11px;
+    }
+}
+
+.accordionList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .childTitle {
+        font-size: 16px;
+        font-weight: 600;
+        color: #111;
+        margin: 0;
+        padding: 10px 25px;
+        background-color: #E8E7E6;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .activeLocale {
+        background: #fff;
+        border: 2px solid #b01c33;
+        color: #b01c33;
+    }
+}
+
+.accordionGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordionTrigger {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 25px;
+    background: #ffffff;
+    border: 1px solid #DBD8D4;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+    z-index: 2;
+
+    .triggerText {
+        font-size: 16px;
+        font-weight: 500;
+        color: #121212;
+    }
+
+    .chevron {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transform-origin: center center;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        filter: brightness(0);
+        transform: rotate(90deg);
+
+        &.rotate {
+            transform: rotate(-90deg);
+        }
+    }
+}
+
+.accordionContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &.expanded {
+        max-height: 2000px;
+    }
+
+    .contentInner {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px 0;
+
+        .childTitle {
+            font-size: 16px;
+            font-weight: 600;
+            color: #111;
+            margin: 0;
+            padding: 10px 25px;
+            background-color: #E8E7E6;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        &:active {
+            background: #dfdedd;
+        }
+    }
+}
