@@ -49,7 +49,7 @@ export default function Partner({ data = dummyData }: { data?: any }) {
             <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-4 lg:gap-16">
 
                 {/* Left Side: Content and Logos */}
-                <div className="flex-1 w-full">
+                <div className="w-full md:w-1/2">
                     <h2 className="text-[30px] md:text-[48px] text-center md:text-left font-bold text-gray-900 mb-6 leading-tight">
                         {data?.title}
                     </h2>
@@ -58,36 +58,14 @@ export default function Partner({ data = dummyData }: { data?: any }) {
                     </p>
 
                     <div className="flex flex-wrap gap-4">
-                        {/* {logos.length > 0 ? (
-                            logos.map((item: any) => (
-                                <div
-                                    key={item.sys.id}
-                                    className="bg-white rounded-xl shadow-sm flex items-center justify-center p-6 min-w-[140px] h-[80px] flex-1 basis-[calc(33.333%-1rem)] hover:shadow-md transition-shadow"
-                                >
-                                    {item.logo?.url ? (
-                                        <Image
-                                            src={item.logo.url}
-                                            alt={item.logo.title || item.name}
-                                            width={120}
-                                            height={40}
-                                            className="object-contain max-h-full"
-                                        />
-                                    ) : (
-                                        <span className="text-xs text-gray-400 font-bold uppercase">{item.name}</span>
-                                    )}
-                                </div>
-                            ))
-                        ) : (
-                            <p className="text-gray-400 italic">No partners available.</p>
-                        )} */}
-                        <div className='max-w-[600px]'>
+                        <div className='w-full'>
                             <AwardSlider data={images} breakPoints={awardBreakpoints} />
                         </div>
                     </div>
                 </div>
 
                 {/* Right Side: Image */}
-                <div className="hidden md:flex flex-1 relative w-full md:min-h-[500px]">
+                <div className="hidden md:flex w-1/2 relative w-full md:min-h-[500px]">
                     {sectionImage ? (
                         /* Memory: rounded-tl-[20px] and rounded-bl-[200px] */
                         <div className="relative h-[600px] w-full rounded-tl-[20px] rounded-bl-[200px] lg:rounded-bl-[240px] overflow-hidden shadow-2xl ">

@@ -23,14 +23,11 @@ export default async function HomePage({ params }: HomeProps) {
 
   const data = await getPageData('/', activeLocale, isDraftMode);
 
-  console.log(data, 'rrr', isDraftMode)
-
   if (!data) return notFound();
 
   // If we are in Draft Mode, use the LivePage client component
   // If we are in Production, just render the standard layout
   if (isDraftMode) {
-    console.log('draft')
     return <LivePage initialData={data} locale={activeLocale} />;
   }
 

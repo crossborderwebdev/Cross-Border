@@ -15,7 +15,7 @@ export default function Features() {
     };
 
     return (
-        <section className="bg-white px-6 pb-[100px] -mt-[100px] relative z-10">
+        <section className="bg-white px-6 pb-[100px] -mt-[100px]">
             {/* Video Wrapper */}
             <div className="max-w-[995px] mx-auto mb-20 relative rounded-[24px] overflow-hidden group">
                 <Image
@@ -47,7 +47,7 @@ export default function Features() {
                     <div
                         key={idx}
                         className={`
-                            p-[30px] rounded-[15px] shadow-[1px_4px_30px_0px_rgba(0,0,0,0.15)] 
+                            p-[40px] py-[40px] md:p-[30px] md:py-[30px] rounded-[15px] shadow-[1px_4px_30px_0px_rgba(0,0,0,0.15)] 
                             transition-all duration-300 cursor-pointer flex flex-col
                             flex-1 basis-full sm:basis-[calc(50%-24px)] lg:basis-[calc(25%-24px)]
                             hover:-translate-y-1.5

@@ -76,7 +76,7 @@ export default function Bottom({ data = teamDummyData }: { data?: any }) {
             </div>
 
             {/* Background Decorative Lines */}
-            <div className="absolute bottom-0 left-0 w-full h-32 pointer-events-none">
+            <div className="absolute bottom-0 left-0 w-full h-40 md:h-32 pointer-events-none">
                 <div className="relative w-full h-full overflow-hidden">
                     <Image
                         src={'/assets/bglines.png'}
