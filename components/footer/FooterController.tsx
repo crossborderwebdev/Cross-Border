@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import React from 'react';
 
 const FooterController = () => {
     const sections = [
@@ -20,8 +19,7 @@ const FooterController = () => {
     return (
         <footer className="bg-black text-white py-16 px-6 font-sans">
             <div className="max-w-7xl mx-auto">
-                {/* Top Grid Sections */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <div className="max-w-[777px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
                     {sections.map((section) => (
                         <div key={section.title}>
                             <h3 className="font-bold text-lg mb-6">{section.title}</h3>
@@ -36,8 +34,6 @@ const FooterController = () => {
                             </ul>
                         </div>
                     ))}
-
-                    {/* Social Media Column */}
                     <div>
                         <h3 className="font-bold text-lg mb-6">Follow Us</h3>
                         <div className="flex space-x-5">
@@ -85,9 +81,8 @@ const FooterController = () => {
                     </div>
                 </div>
 
-                {/* Legal Links Bar */}
-                <div className="border-t border-gray-800 pt-8 mb-8">
-                    <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-gray-400 font-medium">
+                <div className="max-w-[877px] mx-auto border-t border-gray-800 pt-8 mb-8">
+                    <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[14px] text-gray-400 font-medium">
                         <a href="#" className="hover:underline">Compliance, Legal & Regulatory</a>
                         <span className="hidden md:inline text-gray-700">|</span>
                         <a href="#" className="hover:underline">Privacy Policy</a>
@@ -98,14 +93,9 @@ const FooterController = () => {
                     </div>
                 </div>
 
-                {/* Copyright and Disclaimer */}
-                <div className="text-center max-w-4xl mx-auto space-y-8">
-                    <p className="text-[10px] md:text-xs text-gray-500 leading-relaxed">
-                        © 2026 Corpay, Inc. The Corpay logo is owned by Corpay. All third-party marks and/or logos displayed herein are
-                        registered ® or claimed ™ trademarks of their respective owners. Corpay respects all trademark rights.
-                    </p>
+                <div className="max-w-[870px] mx-auto text-center mx-auto space-y-8">
+                    <p className="text-[16px] text-gray-500 leading-relaxed">© 2026 Corpay, Inc. The Corpay logo is owned by Corpay. All third-party marks and/or logos displayed herein are registered ® or claimed ™ trademarks of their respective owners. Corpay respects all trademark rights.</p>
 
-                    {/* Logo Placeholder */}
                     <div className="flex justify-center items-center gap-1">
                         <span className="text-2xl font-bold tracking-tight">Corpay</span>
                         <span className="text-[#ff4d4d] text-xl font-bold">^</span>

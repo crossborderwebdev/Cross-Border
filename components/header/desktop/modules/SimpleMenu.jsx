@@ -2,8 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/SimpleMenu.module.scss';
-import { hrefWithUtmParams, parseDataAttributes } from '../../../../util/helper';
-import useLocationSearch from '../../../../util/useLocationSearch';
+import { hrefWithUtmParams, parseDataAttributes, useLocationSearch } from '@/lib/helper/helper';
 
 const SimpleGridMenu = ({ content, closeMenu }) => {
   const { locationSearch } = useLocationSearch();

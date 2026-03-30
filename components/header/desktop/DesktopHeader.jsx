@@ -8,8 +8,7 @@ import Image from 'next/image';
 import IndustriesMenu from './modules/IndustriesMenu';
 import SimpleGridMenu from './modules/SimpleMenu';
 import dynamic from 'next/dynamic';
-import { hrefWithUtmParams, parseDataAttributes } from '../../../util/helper';
-import useLocationSearch from '../../../util/useLocationSearch';
+import { hrefWithUtmParams, parseDataAttributes, useLocationSearch } from '@/lib/helper/helper';
 
 // const AutoComplete = dynamic(() => import('../newAutoComplete'), {
 //   loading: () => <p></p>

@@ -6,8 +6,7 @@ import MobileSubDrawer from './MobileSubDrawer';
 import styles from './MobileMenuDrawer.module.scss';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import { hrefWithUtmParams, parseDataAttributes } from '../../../util/helper';
-import useLocationSearch from '../../../util/useLocationSearch';
+import { hrefWithUtmParams, parseDataAttributes, useLocationSearch } from '@/lib/helper/helper';
 
 // const AutoComplete = dynamic(() => import('../newAutoComplete'), {
 //   loading: () => <p></p>

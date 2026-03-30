@@ -3,8 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import MobileMenuDrawer from './MobileMenuDrawer';
 import styles from './MobileHeader.module.scss';
-import { hrefWithUtmParams } from '../../../util/helper';
-import useLocationSearch from '../../../util/useLocationSearch';
+import { hrefWithUtmParams, parseDataAttributes, useLocationSearch } from '@/lib/helper/helper';
 
 const MobileHeader = ({ data, localeText, contactUsUrl }) => {
   const [isOpen, setIsOpen] = useState(false);

@@ -2,8 +2,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/SolutionsMenu.module.scss';
-import { hrefWithUtmParams, parseDataAttributes } from '../../../../util/helper';
-import useLocationSearch from '../../../../util/useLocationSearch';
+import { hrefWithUtmParams, parseDataAttributes, useLocationSearch } from '@/lib/helper/helper';
 import { useRouter } from 'next/router';
 
 const SolutionsMenu = ({ content, closeMenu }) => {

@@ -4,7 +4,7 @@ export default function Team({ data }: any) {
     return (
         <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20">
             <div className="max-w-[560px] w-full flex-1 relative group rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-                <Image src={data.videoPoster} alt="Team" width={300} height={200} className="w-full" />
+                <Image src={data.videoPoster} alt="Team" width={600} height={400} className="w-full" />
                 {/* <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                     <button className="w-20 h-20 bg-[#C43776] rounded-full flex items-center justify-center transition-transform hover:scale-110">
                         <span className="text-white text-3xl ml-1">▶</span>
