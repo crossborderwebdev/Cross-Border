@@ -36,7 +36,7 @@ export default function RootLayout({
           enableInspectorMode={true}
           enableLiveUpdates={true}
         >
-          {/* <HeaderController /> */}
+          <HeaderController />
           {children}
           <FooterController />
         </ContentfulLivePreviewProvider>
