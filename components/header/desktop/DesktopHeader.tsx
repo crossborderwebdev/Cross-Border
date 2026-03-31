@@ -63,7 +63,7 @@ const DesktopHeader = ({ data, locales, localeText, contactUsUrl }: DesktopHeade
   return (
     <header
       ref={headerRef}
-      className="sticky top-0 z-[1000] h-20 w-full border-b border-gray-200 bg-white flex items-center font-medium"
+      className="fixed top-0 z-[1000] h-20 w-full border-b border-gray-200 bg-white flex items-center font-medium"
     >
       <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-10">
 
@@ -115,10 +115,8 @@ const DesktopHeader = ({ data, locales, localeText, contactUsUrl }: DesktopHeade
 
                     {isActive && (
                       <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4">
-                        {isSolutions ? (
+                        {(isSolutions || isIndustries) ? (
                           <SolutionsMenu content={group} closeMenu={() => setActiveMenuId(null)} />
-                        ) : isIndustries ? (
-                          <IndustriesMenu content={group} closeMenu={() => setActiveMenuId(null)} />
                         ) :
                           <SimpleMenu content={group} closeMenu={() => setActiveMenuId(null)} />
                         }
