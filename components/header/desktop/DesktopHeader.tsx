@@ -192,7 +192,7 @@ const DesktopHeader = ({ data, locales, localeText, contactUsUrl }: DesktopHeade
                 </div>
               </button>
 
-              {isLocaleOpen && (
+              {/* {isLocaleOpen && (
                 <ul className="absolute top-[calc(100%+15px)] right-0 z-[999] min-w-[220px] max-h-[500px] overflow-y-auto rounded-md border border-gray-200 bg-white py-2 shadow-xl list-none">
                   {locales.map((l) => (
                     <li
@@ -205,7 +205,7 @@ const DesktopHeader = ({ data, locales, localeText, contactUsUrl }: DesktopHeade
                     </li>
                   ))}
                 </ul>
-              )}
+              )} */}
             </div>
           </div>
         </div>

@@ -31,7 +31,7 @@ const IndustriesMenu = ({ content, closeMenu }: IndustriesMenuProps) => {
 
     return (
         <div className="w-[95vw] max-w-[1345px] bg-white rounded-[15px] shadow-[0_15px_40px_rgba(0,0,0,0.12)]">
-            <div className="flex p-[35px] min-h-[460px]">
+            <div className="flex p-[35px]">
 
                 {/* Left Sidebar */}
                 <aside className="flex-[0_0_284px] bg-[#F7F6F5] rounded-xl p-[15px] flex flex-col gap-[2px]">
@@ -81,7 +81,7 @@ const IndustriesMenu = ({ content, closeMenu }: IndustriesMenuProps) => {
                         </div>
 
                         {/* Case Study Promo Card */}
-                        <div className="w-[257px] h-[370px] flex flex-col gap-10 justify-between">
+                        <div className="w-[257px] h-[375px] flex flex-col gap-10 justify-between">
                             <div className='flex flex-col gap-5'>
                                 <div className="w-full aspect-[257/148] relative rounded-xl overflow-hidden bg-[#D9D9D9]">
                                     {activeTabData?.ctaImage && (
@@ -96,10 +96,10 @@ const IndustriesMenu = ({ content, closeMenu }: IndustriesMenuProps) => {
                                 </div>
 
                                 <div className="flex flex-col gap-2">
-                                    <p className="text-[20px] font-normal leading-tight text-[#0D0D0D]">
+                                    <p className="text-[20px] font-normal leading-tight text-[#0D0D0D] line-clamp-2">
                                         {activeTabData?.pageReference?.seo?.title}
                                     </p>
-                                    <p className="text-sm text-[#121212]">
+                                    <p className="text-sm text-[#121212] line-clamp-3">
                                         {activeTabData?.pageReference?.seo?.description}
                                     </p>
                                 </div>
@@ -114,7 +114,7 @@ const IndustriesMenu = ({ content, closeMenu }: IndustriesMenuProps) => {
                                 {activeTabData?.ctaButton || 'Learn More'}
                                 <Image
                                     src="https://images.ctfassets.net/h83dujey17us/7zieE00PJ8g5R2nK8ZLz0e/1dbf166b844f8ec0890a371042480343/RightArrowWhiteNew.svg"
-                                    alt="" width={8} height={10}
+                                    alt="" width={6} height={6}
                                 />
                             </Link>
                         </div>

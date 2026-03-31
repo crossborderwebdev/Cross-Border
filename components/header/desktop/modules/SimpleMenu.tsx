@@ -63,9 +63,9 @@ const SimpleGridMenu = ({ content, closeMenu }: SimpleGridMenuProps) => {
         </main>
 
         {/* Promo Column */}
-        <aside className="w-[257px] shrink-0">
-          <div className="flex flex-col">
-            <div className="w-full aspect-[257/148] relative rounded-xl overflow-hidden bg-[#f0f0f0] mb-6">
+        <div className="w-[257px] h-[375px] flex flex-col gap-10 justify-between">
+          <div className='flex flex-col gap-5'>
+            <div className="w-full aspect-[257/148] relative rounded-xl overflow-hidden bg-[#D9D9D9]">
               {promo.ctaImage?.url && (
                 <Image
                   src={promo.ctaImage.url}
@@ -77,29 +77,29 @@ const SimpleGridMenu = ({ content, closeMenu }: SimpleGridMenuProps) => {
               )}
             </div>
 
-            <div className="mb-6">
-              <h3 className="text-[20px] font-semibold text-[#1a1a1a] leading-[1.3] mb-3">
+            <div className="flex flex-col gap-2">
+              <p className="text-[20px] font-normal leading-tight text-[#0D0D0D] line-clamp-2">
                 {promo?.pageReference?.seo?.title}
-              </h3>
-              <p className="text-sm text-[#666666] leading-relaxed">
+              </p>
+              <p className="text-sm text-[#121212] line-clamp-3">
                 {promo?.pageReference?.seo?.description}
               </p>
             </div>
-
-            <Link
-              href={hrefWithUtmParams(`/resources/whitepapers${getUrl(promo)}`, locationSearch?.search)}
-              onClick={closeMenu}
-              className="w-full bg-[#111] text-white px-4 py-3 rounded-md font-medium flex justify-center items-center gap-3 transition-all hover:bg-[#595959]"
-              {...parseDataAttributes(promo?.dataAttributes)}
-            >
-              {promo.ctaButton}
-              <Image
-                src="https://images.ctfassets.net/h83dujey17us/3eOF3iC9tzE3LDLLLmpCqT/2fb34aa275190e062ecb00c666d2f9fe/download_icon_white.svg"
-                alt="" width={16} height={16}
-              />
-            </Link>
           </div>
-        </aside>
+
+          <Link
+            href={hrefWithUtmParams(`/resources/customer-stories${getUrl(promo)}`, locationSearch?.search)}
+            onClick={closeMenu}
+            className="bg-[#111] text-white px-4 py-3 rounded-md font-medium flex justify-center items-center gap-2 transition-all hover:bg-[#595959]"
+            {...parseDataAttributes(promo?.dataAttributes)}
+          >
+            {promo.ctaButton || ''}
+            <Image
+              src="https://images.ctfassets.net/h83dujey17us/3eOF3iC9tzE3LDLLLmpCqT/2fb34aa275190e062ecb00c666d2f9fe/download_icon_white.svg"
+              alt="" width={16} height={16}
+            />
+          </Link>
+        </div>
 
       </div>
     </div>

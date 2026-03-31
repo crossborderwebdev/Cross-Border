@@ -65,21 +65,41 @@ const SolutionsMenu = ({ content, closeMenu }: SolutionsMenuProps) => {
         </div>
 
         {/* Promo Column */}
-        <div className="w-[257px] h-[370px] flex flex-col gap-10">
-          <div className="rounded-xl overflow-hidden">
-            <Image
-              src={activeTabData?.ctaImage?.url}
-              alt="Promo" width={257} height={282} className="w-full h-auto rounded-xl"
-            />
+        <div className="w-[257px] h-[375px] flex flex-col gap-10 justify-between">
+          <div className='flex flex-col gap-5'>
+            <div className="w-full aspect-[257/148] relative rounded-xl overflow-hidden bg-[#D9D9D9]">
+              {activeTabData.ctaImage?.url && (
+                <Image
+                  src={activeTabData.ctaImage.url}
+                  alt="Promo"
+                  fill
+                  className="object-cover"
+                  sizes="257px"
+                />
+              )}
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <p className="text-[20px] font-normal leading-tight text-[#0D0D0D] line-clamp-2">
+                {activeTabData?.pageReference?.seo?.title}
+              </p>
+              <p className="text-sm text-[#121212] line-clamp-3">
+                {activeTabData?.pageReference?.seo?.description}
+              </p>
+            </div>
           </div>
+
           <Link
-            href={hrefWithUtmParams(getUrl(activeTabData), locationSearch.search)}
+            href={hrefWithUtmParams(`/resources/customer-stories${getUrl(activeTabData)}`, locationSearch?.search)}
             onClick={closeMenu}
             className="bg-[#111] text-white px-4 py-3 rounded-md font-medium flex justify-center items-center gap-2 transition-all hover:bg-[#595959]"
             {...parseDataAttributes(activeTabData?.dataAttributes)}
           >
-            {activeTabData?.ctaButton}
-            <Image src="https://images.ctfassets.net/h83dujey17us/7zieE00PJ8g5R2nK8ZLz0e/1dbf166b844f8ec0890a371042480343/RightArrowWhiteNew.svg" alt="" width={8} height={10} />
+            {activeTabData.ctaButton || ''}
+            <Image
+              src="https://images.ctfassets.net/h83dujey17us/7zieE00PJ8g5R2nK8ZLz0e/1dbf166b844f8ec0890a371042480343/RightArrowWhiteNew.svg"
+              alt="" width={6} height={6}
+            />
           </Link>
         </div>
       </div>
