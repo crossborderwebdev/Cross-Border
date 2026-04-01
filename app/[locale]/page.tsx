@@ -21,7 +21,7 @@ export default async function HomePage({ params }: HomeProps) {
   const cookieStore = await cookies();
   const activeLocale = cookieStore.get('NEXT_LOCALE')?.value || locale;
 
-  const data = await getPageData('/', activeLocale, isDraftMode);
+  const data = await getPageData('/', 'en-US', isDraftMode);
 
   if (!data) return notFound();
 

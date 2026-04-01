@@ -4,8 +4,8 @@ import { useState, useRef, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
-import { hrefWithUtmParams, parseDataAttributes } from '@/lib/helper/helper';
-import { getContactUsUrl } from '@/lib/helper/navigationHelper'; // Ensure this is imported
+import { parseDataAttributes } from '@/lib/helper/helper';
+import { getContactUsUrl } from '@/lib/helper/navigationHelper';
 import dynamic from 'next/dynamic';
 
 const SolutionsMenu = dynamic(() => import('./modules/SolutionsMenu'), { ssr: false });
@@ -13,24 +13,23 @@ const SimpleMenu = dynamic(() => import('./modules/SimpleMenu'), { ssr: false })
 
 interface DesktopHeaderProps {
   data: any[];
-  locales: any[];
+  regionalLocales: any[];
   localeText: Record<string, any>;
-  currentLocale: string; // Received from HeaderController
+  currentLocale: string;
 }
 
-const DesktopHeader = ({ data, locales, localeText, currentLocale }: DesktopHeaderProps) => {
+const DesktopHeader = ({ data, regionalLocales, localeText, currentLocale }: DesktopHeaderProps) => {
   const pathname = usePathname();
   const router = useRouter();
 
   // State for UI interactions
   const [activeMenuId, setActiveMenuId] = useState<string | null>(null);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  // const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isLocaleOpen, setIsLocaleOpen] = useState(false);
   const headerRef = useRef<HTMLDivElement>(null);
 
-  // 1. Dynamic logic that depends on the current path/locale
-  // Using useMemo ensures this only recalculates when the path changes
   const contactUsUrl = useMemo(() => getContactUsUrl(pathname, currentLocale), [pathname, currentLocale]);
+  const locales = regionalLocales.flatMap(region => region.items)
 
   const currentLocaleLabel = useMemo(() =>
     locales.find(l => l.code === currentLocale)?.label || 'NA',
@@ -46,7 +45,7 @@ const DesktopHeader = ({ data, locales, localeText, currentLocale }: DesktopHead
       if (headerRef.current && !headerRef.current.contains(e.target as Node)) {
         setActiveMenuId(null);
         setIsLocaleOpen(false);
-        setIsSearchOpen(false);
+        // setIsSearchOpen(false);
       }
     };
     document.addEventListener('mousedown', closeAll);
@@ -140,23 +139,50 @@ const DesktopHeader = ({ data, locales, localeText, currentLocale }: DesktopHead
           </Link>
 
           {/* Locale Selector */}
-          <div className="relative">
+          <div>
             <button className="flex items-center gap-2 cursor-pointer" onClick={() => setIsLocaleOpen(!isLocaleOpen)}>
               <Image src="https://images.ctfassets.net/h83dujey17us/6rHsvg59C8Ymusk3LZOVJn/0d2a480276d00da59c1cff7a260728b2/globeIconNew.svg" alt="" width={24} height={24} />
-              {currentLocaleLabel}
+              {currentLocaleLabel === 'USA' ? 'NA' : currentLocaleLabel}
+              <div className={`transition-transform duration-300 ${isLocaleOpen ? 'rotate-180' : ''}`}>
+                <Image
+                  src="https://images.ctfassets.net/h83dujey17us/grSjMBOSr05AM1qdKha9T/07c1aeb0c3521988752c2d3651cfd5e3/down_black_arrow.svg"
+                  alt="arrow"
+                  width={7}
+                  height={5}
+                />
+              </div>
             </button>
+
             {isLocaleOpen && (
-              <ul className="absolute top-[calc(100%+15px)] right-0 z-[999] min-w-[220px] rounded-md border bg-white py-2 shadow-xl">
-                {locales.map((l) => (
-                  <li
-                    key={l.code}
-                    className={`cursor-pointer px-5 py-3 text-sm hover:bg-gray-50 ${currentLocale === l.code ? 'text-[#b01c33] font-bold' : ''}`}
-                    onClick={() => onSelectLocale(l.code)}
-                  >
-                    {l.fullName}
-                  </li>
-                ))}
-              </ul>
+              <div className="absolute top-full left-1/2 z-[1100] w-[920px] -translate-x-1/2 mt-4 rounded-[15px] bg-white p-7 border border-gray-200 shadow-[0_15px_40px_rgba(0,0,0,0.12)]">
+                <div className="flex gap-12">
+                  {regionalLocales.map((group) => (
+                    <div key={group.region} className="flex-1">
+                      <h3 className="text-2xl font-normal text-gray-400 mb-6 font-serif">{group.region}</h3>
+                      <div className="grid grid-cols-2 gap-3">
+                        {group.items.map((l: any) => {
+                          const isActive = currentLocale === l.code;
+                          return (
+                            <button
+                              key={l.code}
+                              onClick={() => onSelectLocale(l.code)}
+                              className={`flex items-center gap-3 px-4 py-3 cursor-pointer rounded-lg border text-left transition-all duration-200 group ${isActive
+                                ? 'border-gray-200 bg-[#EAEAEA] font-bold'
+                                : 'border-[#E1E1E1] hover:border-transparent hover:bg-[#EAEAEA]'
+                                }`}
+                            >
+                              <Image src={l.flag} alt={l.fullName} width={24} height={24} className='w-auto h-auto' />
+                              <span className={`text-sm ${isActive ? 'text-black' : 'text-gray-600 group-hover:text-black'}`}>
+                                {l.fullName}
+                              </span>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             )}
           </div>
         </div>

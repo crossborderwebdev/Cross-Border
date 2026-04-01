@@ -2,11 +2,10 @@
 import DesktopHeader from './desktop/DesktopHeader';
 import MobileHeader from './mbl/MobileHeader';
 import { navigationData } from '@/public/data/dummyData';
-import { locales, localeText } from '@/lib/helper/navigationHelper';
+import { locales, localeText, regionalLocales } from '@/lib/helper/navigationHelper';
 
-// This is a Server Component now
 const HeaderController = ({ locale }: { locale: string }) => {
-  // Since this is on the server, we fetch the data directly
+
   const data = navigationData.props.links;
 
   return (
@@ -22,7 +21,7 @@ const HeaderController = ({ locale }: { locale: string }) => {
       <div className="hidden lg:block pt-[80px]">
         <DesktopHeader
           data={data}
-          locales={locales}
+          regionalLocales={regionalLocales}
           localeText={localeText}
           currentLocale={locale}
         />

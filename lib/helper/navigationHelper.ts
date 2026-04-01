@@ -17,6 +17,33 @@ export const locales = [
     { code: 'nl-NL', label: 'NLD', fullName: 'Europe - Nederland' },
 ];
 
+export const regionalLocales = [
+    {
+        region: "Worldwide",
+        items: [
+            { code: "en-US", label: "USA", fullName: "Canada & USA", flag: "/assets/usFlag.png" },
+            { code: "en-AU", label: "AU", fullName: "Australia", flag: "/assets/usFlag.png" },
+            { code: "fr-CA", label: "CA", fullName: "Canada-Francais", flag: "/assets/usFlag.png" },
+            { code: "en-NZ", label: "NZ", fullName: "New Zealand", flag: "/assets/usFlag.png" },
+            { code: "en-GB", label: "UK", fullName: "United Kingdom", flag: "/assets/usFlag.png" },
+            { code: "en-SG", label: "SG", fullName: "Singapore", flag: "/assets/usFlag.png" },
+        ]
+    },
+    {
+        region: "Europe",
+        items: [
+            { code: "en-IE", label: "IE", fullName: "Ireland", flag: "/assets/usFlag.png" },
+            { code: "it-IT", label: "IT", fullName: "Italia", flag: "/assets/usFlag.png" },
+            { code: "pt-PT", label: "PT", fullName: "Português", flag: "/assets/usFlag.png" },
+            { code: "es-ES", label: "ES", fullName: "Espana", flag: "/assets/usFlag.png" },
+            { code: "sv-SE", label: "SE", fullName: "Sverige", flag: "/assets/usFlag.png" },
+            { code: "fr-FR", label: "FR", fullName: "Francais", flag: "/assets/usFlag.png" },
+            { code: "de-DE", label: "DE", fullName: "Deutsch", flag: "/assets/usFlag.png" },
+            { code: "fr-LU", label: "LU", fullName: "Luxembourg", flag: "/assets/usFlag.png" },
+        ]
+    }
+];
+
 export const localeText = {
     'en-US': {
         'Talk to an expert': 'Talk to an expert',
