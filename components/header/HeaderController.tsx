@@ -1,34 +1,30 @@
-'use client';
-import { usePathname, useParams } from 'next/navigation';
+// components/header/HeaderController.tsx
 import DesktopHeader from './desktop/DesktopHeader';
 import MobileHeader from './mbl/MobileHeader';
 import { navigationData } from '@/public/data/dummyData';
-import { locales, localeText, getContactUsUrl } from '@/lib/helper/navigationHelper';
+import { locales, localeText } from '@/lib/helper/navigationHelper';
 
-const HeaderController = ({ children = navigationData }) => {
-  const pathname = usePathname();
-  const params = useParams();
-  const currentLocale = params.locale as string || 'en-US';
-
-  // Use a helper function to keep this file clean
-  const contactUsUrl = getContactUsUrl(pathname, currentLocale);
+// This is a Server Component now
+const HeaderController = ({ locale }: { locale: string }) => {
+  // Since this is on the server, we fetch the data directly
+  const data = navigationData.props.links;
 
   return (
     <>
       <div className="block lg:hidden pt-[74px]">
         <MobileHeader
-          data={children.props.links}
+          data={data}
           locales={locales}
           localeText={localeText}
-          contactUsUrl={contactUsUrl}
+          currentLocale={locale}
         />
       </div>
       <div className="hidden lg:block pt-[80px]">
         <DesktopHeader
-          data={children.props.links}
+          data={data}
           locales={locales}
           localeText={localeText}
-          contactUsUrl={contactUsUrl}
+          currentLocale={locale}
         />
       </div>
     </>

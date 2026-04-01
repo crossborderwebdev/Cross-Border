@@ -1,10 +1,12 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import MobileMenuDrawer from './MobileMenuDrawer';
 import { hrefWithUtmParams, useLocationSearch } from '@/lib/helper/helper';
+import { getContactUsUrl } from '@/lib/helper/navigationHelper';
 
 interface Locale {
   code: string;
@@ -13,17 +15,27 @@ interface Locale {
 }
 
 interface MobileHeaderProps {
-  data: any; // Ideally, define a strict interface based on your Contentful model
+  data: any;
   locales: Locale[];
   localeText: Record<string, any>;
-  contactUsUrl: string;
+  currentLocale: string;
 }
 
-const MobileHeader = ({ data, locales, localeText, contactUsUrl }: MobileHeaderProps) => {
+const MobileHeader = ({ data, locales, localeText, currentLocale }: MobileHeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const { locationSearch } = useLocationSearch();
+  const pathname = usePathname();
 
-  // Prevent background scroll when menu is open (CWV: User Experience)
+  // 1. Memoized logic to prevent layout shifts on hydration
+  const contactUsUrl = useMemo(() =>
+    getContactUsUrl(pathname, currentLocale),
+    [pathname, currentLocale]);
+
+  const translations = useMemo(() =>
+    localeText[currentLocale] || localeText['en-US'],
+    [localeText, currentLocale]);
+
+  // Prevent background scroll (UX/CWV Improvement)
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -40,6 +52,7 @@ const MobileHeader = ({ data, locales, localeText, contactUsUrl }: MobileHeaderP
   return (
     <header className="fixed top-0 left-0 w-full h-[74px] bg-white border-b border-[#f0f0f0] z-[2000] flex items-center">
       <div className="w-full px-5 flex justify-between items-center">
+
         {/* Logo - Priority set for LCP optimization */}
         <Link
           href={hrefWithUtmParams('/', locationSearch.search)}
@@ -52,15 +65,15 @@ const MobileHeader = ({ data, locales, localeText, contactUsUrl }: MobileHeaderP
             alt="Corpay"
             width={141}
             height={44}
-            priority
+            priority // High priority for mobile LCP
             className="w-auto h-auto"
           />
         </Link>
 
-        {/* Animated Hamburger Button - CSS Only (No Image Request) */}
+        {/* Animated Hamburger Button */}
         <button
           type="button"
-          aria-label="Toggle Menu"
+          aria-label={isOpen ? "Close Menu" : "Open Menu"}
           className="relative w-[30px] h-5 flex flex-col justify-between p-0 bg-transparent border-none cursor-pointer group"
           onClick={toggleMenu}
         >
@@ -82,10 +95,11 @@ const MobileHeader = ({ data, locales, localeText, contactUsUrl }: MobileHeaderP
       {/* Drawer Component */}
       <MobileMenuDrawer
         isOpen={isOpen}
-        onClose={toggleMenu}
+        onClose={() => setIsOpen(false)}
         navigationData={data}
         locales={locales}
         localeText={localeText}
+        currentLocale={currentLocale}
         contactUsUrl={contactUsUrl}
       />
     </header>
