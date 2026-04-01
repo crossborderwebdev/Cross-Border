@@ -26,7 +26,8 @@ export const regionalLocales = [
             { code: "fr-CA", label: "CA", fullName: "Canada-Francais", flag: "/assets/usFlag.png" },
             { code: "en-NZ", label: "NZ", fullName: "New Zealand", flag: "/assets/usFlag.png" },
             { code: "en-GB", label: "UK", fullName: "United Kingdom", flag: "/assets/usFlag.png" },
-            { code: "en-SG", label: "SG", fullName: "Singapore", flag: "/assets/usFlag.png" },
+            { code: "en-SG", label: "SGP", fullName: "Singapore", flag: "/assets/usFlag.png" },
+            { code: "en-CHI", label: "JEY", fullName: "Channel Islands", flag: "/assets/usFlag.png" },
         ]
     },
     {
