@@ -107,7 +107,7 @@ const MobileMenuDrawer = ({
                   <span className="text-base font-medium">{item.linkText}</span>
                   <Image
                     src="https://images.ctfassets.net/h83dujey17us/7zieE00PJ8g5R2nK8ZLz0e/1dbf166b844f8ec0890a371042480343/RightArrowWhiteNew.svg"
-                    alt="" width={6} height={9} className="brightness-0"
+                    alt="" width={6} height={10} className="brightness-0 h-auto w-auto"
                   />
                 </button>
               ))}
@@ -122,7 +122,7 @@ const MobileMenuDrawer = ({
                 </div>
                 <Image
                   src="https://images.ctfassets.net/h83dujey17us/7zieE00PJ8g5R2nK8ZLz0e/1dbf166b844f8ec0890a371042480343/RightArrowWhiteNew.svg"
-                  alt="" width={6} height={9} className="brightness-0"
+                  alt="" width={6} height={10} className="brightness-0 h-auto w-auto"
                 />
               </button>
             </nav>
@@ -159,7 +159,7 @@ const MobileMenuDrawer = ({
             {translationsText['Talk to an expert'] || 'Talk to an expert'}
             <Image
               src="https://images.ctfassets.net/h83dujey17us/7zieE00PJ8g5R2nK8ZLz0e/1dbf166b844f8ec0890a371042480343/RightArrowWhiteNew.svg"
-              alt="" width={8} height={12} className="brightness-0 invert"
+              alt="" width={6} height={10} className="brightness-0 invert w-auto h-auto"
             />
           </Link>
         </div>

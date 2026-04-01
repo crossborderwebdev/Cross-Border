@@ -79,9 +79,10 @@ const DesktopHeader = ({ data, locales, localeText, currentLocale }: DesktopHead
             <Image
               src="https://images.ctfassets.net/h83dujey17us/4yaRlTL19o9VSqVeTa3mSV/215ef45913d5fa7b8f50269441cf10bd/corpay.svg"
               alt="Corpay"
-              width={135}
-              height={32}
-              priority // Crucial for LCP
+              width={126}
+              height={27}
+              className="h-auto w-auto"
+              priority
               onClick={() => setActiveMenuId(null)}
             />
           </Link>
@@ -94,7 +95,7 @@ const DesktopHeader = ({ data, locales, localeText, currentLocale }: DesktopHead
                 const isActive = activeMenuId === group.sys.id;
 
                 return (
-                  <li key={group.sys.id} className="relative">
+                  <li key={group.sys.id}>
                     <button
                       className={`cursor-pointer flex items-center gap-1 border-none bg-none p-0 text-base font-normal transition-colors duration-200 ${isActive ? 'text-black font-bold' : 'text-[#121212]'
                         }`}

@@ -52,7 +52,7 @@ export default function Awards({ data = awardsDummyData }: { data?: any }) {
                                 alt={data?.heroImage?.title || "Awards"}
                                 fill
                                 style={{ objectFit: 'cover', objectPosition: "center" }}
-                                // sizes="(max-width: 768px) 0vw, 50vw"
+                                sizes="(max-width: 768px) 0vw, 50vw"
                                 priority={false}
                             />
                         </div>

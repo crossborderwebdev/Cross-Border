@@ -51,7 +51,7 @@ const SolutionsMenu = ({ content, closeMenu }: SolutionsMenuProps) => {
                 {...parseDataAttributes(item?.dataAttributes)}
               >
                 <div className="flex-shrink-0 w-[55px] h-[55px] bg-white border border-[#D1CDCA] rounded-lg flex items-center justify-center">
-                  <Image src={item.icon?.url} alt="" width={24} height={24} />
+                  <Image src={item.icon?.url} alt="" width={24} height={24} className="h-auto w-auto" />
                 </div>
                 <div className="flex flex-col">
                   <h4 className="m-0 text-base font-medium text-[#222222]">{item.linkText || ""}</h4>
@@ -98,7 +98,7 @@ const SolutionsMenu = ({ content, closeMenu }: SolutionsMenuProps) => {
             {activeTabData.ctaButton || ''}
             <Image
               src="https://images.ctfassets.net/h83dujey17us/7zieE00PJ8g5R2nK8ZLz0e/1dbf166b844f8ec0890a371042480343/RightArrowWhiteNew.svg"
-              alt="" width={6} height={6}
+              alt="" width={6} height={10} className="h-auto w-auto"
             />
           </Link>
         </div>

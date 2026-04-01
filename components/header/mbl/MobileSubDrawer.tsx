@@ -56,7 +56,7 @@ const MobileSubDrawer = ({
       >
         <Image
           src="https://images.ctfassets.net/h83dujey17us/7zieE00PJ8g5R2nK8ZLz0e/1dbf166b844f8ec0890a371042480343/RightArrowWhiteNew.svg"
-          alt="Back" width={7} height={11} className="rotate-180 brightness-0"
+          alt="Back" width={6} height={10} className="rotate-180 brightness-0 h-auto w-auto"
         />
         Back
       </button>}
@@ -92,7 +92,7 @@ const MobileSubDrawer = ({
                   >
                     <span className="text-base font-medium text-[#121212]">{col.title}</span>
                     <div className={`transition-transform duration-400 brightness-0 ${isExpanded ? '-rotate-90' : 'rotate-90'}`}>
-                      <Image src="https://images.ctfassets.net/h83dujey17us/7zieE00PJ8g5R2nK8ZLz0e/1dbf166b844f8ec0890a371042480343/RightArrowWhiteNew.svg" alt="" width={6} height={9} />
+                      <Image src="https://images.ctfassets.net/h83dujey17us/7zieE00PJ8g5R2nK8ZLz0e/1dbf166b844f8ec0890a371042480343/RightArrowWhiteNew.svg" alt="" width={6} height={10} className="h-auto w-auto" />
                     </div>
                   </button>
 

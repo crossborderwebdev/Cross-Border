@@ -51,7 +51,7 @@ const SimpleGridMenu = ({ content, closeMenu }: SimpleGridMenuProps) => {
                     alt=""
                     width={24}
                     height={24}
-                    className="object-contain"
+                    className="h-auto w-auto"
                   />
                 </div>
                 <h4 className="text-base font-medium text-[#1a1a1a] leading-tight">
@@ -96,7 +96,7 @@ const SimpleGridMenu = ({ content, closeMenu }: SimpleGridMenuProps) => {
             {promo.ctaButton || ''}
             <Image
               src="https://images.ctfassets.net/h83dujey17us/3eOF3iC9tzE3LDLLLmpCqT/2fb34aa275190e062ecb00c666d2f9fe/download_icon_white.svg"
-              alt="" width={16} height={16}
+              alt="" width={16} height={16} className="h-auto w-auto"
             />
           </Link>
         </div>

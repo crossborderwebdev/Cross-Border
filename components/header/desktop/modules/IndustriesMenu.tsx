@@ -114,7 +114,7 @@ const IndustriesMenu = ({ content, closeMenu }: IndustriesMenuProps) => {
                                 {activeTabData?.ctaButton || 'Learn More'}
                                 <Image
                                     src="https://images.ctfassets.net/h83dujey17us/7zieE00PJ8g5R2nK8ZLz0e/1dbf166b844f8ec0890a371042480343/RightArrowWhiteNew.svg"
-                                    alt="" width={6} height={6}
+                                    alt="" width={6} height={10} className="h-auto w-auto"
                                 />
                             </Link>
                         </div>
