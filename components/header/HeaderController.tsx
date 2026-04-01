@@ -15,14 +15,14 @@ const HeaderController = ({ children = navigationData }) => {
 
   return (
     <>
-      {/* <div className="block lg:hidden pt-[74px]">
+      <div className="block lg:hidden pt-[74px]">
         <MobileHeader
           data={children.props.links}
           locales={locales}
           localeText={localeText}
           contactUsUrl={contactUsUrl}
         />
-      </div> */}
+      </div>
       <div className="hidden lg:block pt-[80px]">
         <DesktopHeader
           data={children.props.links}
