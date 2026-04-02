@@ -63,7 +63,7 @@ export default function Awards({ data = awardsDummyData }: { data?: any }) {
 
                 {/* Right Side: Content and Slider */}
                 <div className="flex-1 w-full px-6 md:px-0 md:pr-5 overflow-hidden">
-                    <h2 className="text-center md:text-left text-[30px] md:text-[48px] font-bold text-gray-900 mb-6 leading-tight">
+                    <h2 className="text-center md:text-left text-[30px] md:text-[48px] font-bold text-black mb-6 leading-tight">
                         {data?.title}
                     </h2>
                     <p className="text-center md:text-left text-[20px] font-normal text-gray-700 leading-relaxed mb-10 md:mb-30 md:max-w-xl">

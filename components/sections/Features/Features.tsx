@@ -33,7 +33,7 @@ export default function Features() {
 
             {/* Header */}
             <div className="text-center mb-[60px]">
-                <h2 className="text-[30px] md:text-[40px] font-semibold text-gray-900 leading-tight">
+                <h2 className="text-[30px] md:text-[40px] font-semibold text-black leading-tight">
                     Products designed for the way modern business pays.
                 </h2>
                 <p className="font-medium text-[22px] md:text-[30px] text-gray-700 mt-2">

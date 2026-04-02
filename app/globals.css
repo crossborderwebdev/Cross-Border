@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-black: #1f1f1f;
+  --color-white: #fff;
+  --color-red: #B9194A;
+
+  /* Custom Widths */
+  --spacing-main-container: 1440px;
+}
+
+/* Base styles (Jo pehle @layer base mein thay) */
+@layer base {
+  body {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-family: 'Inter', sans-serif;
+  }
+}
