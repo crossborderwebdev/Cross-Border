@@ -23,7 +23,7 @@ export default function Features() {
                     alt="Video"
                     width={1200}
                     height={675}
-                    className="h-auto w-auto"
+                    className="h-auto w-full"
                 />
                 {/* Play Button - Only shows on group hover as per your SCSS display:none/flex logic */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-[#db2777] rounded-full hidden group-hover:flex items-center justify-center text-white text-2xl cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-[#be185d]">

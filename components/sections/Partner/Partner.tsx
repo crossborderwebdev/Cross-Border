@@ -46,7 +46,7 @@ export default function Partner({ data = dummyData }: { data?: any }) {
 
     return (
         <section className="py-20 px-6 md:ps-6 md:pe-0 overflow-hidden" style={{ background: 'linear-gradient(180deg,rgba(180, 211, 235, 1) 50%, rgba(247, 246, 245, 1) 100%)' }}>
-            <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-4 lg:gap-16">
+            <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-4 lg:gap-16">
 
                 {/* Left Side: Content and Logos */}
                 <div className="w-full md:w-1/2">

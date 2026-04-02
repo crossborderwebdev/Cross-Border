@@ -41,7 +41,7 @@ export default function Awards({ data = awardsDummyData }: { data?: any }) {
             className="py-2 md:py-10 lg:pb-30 overflow-hidden"
             style={{ background: 'linear-gradient(180deg,rgba(247, 246, 245, 1) 60%, rgba(244, 185, 99, 1) 100%)' }}
         >
-            <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center gap-12 lg:gap-16">
+            <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row items-center gap-12 lg:gap-16">
 
                 {/* Left Side: Image */}
                 <div className="hidden md:block flex-1 relative">
