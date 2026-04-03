@@ -78,10 +78,10 @@ const SimpleGridMenu = ({ content, closeMenu }: SimpleGridMenuProps) => {
             </div>
 
             <div className="flex flex-col gap-2">
-              <p className="text-[20px] font-normal leading-tight text-[#0D0D0D] line-clamp-2">
+              <p className="text-xl font-normal leading-tight text-[#0D0D0D] line-clamp-2">
                 {promo?.pageReference?.seo?.title}
               </p>
-              <p className="text-sm text-[#121212] line-clamp-3">
+              <p className="text-sm text-black line-clamp-3">
                 {promo?.pageReference?.seo?.description}
               </p>
             </div>
@@ -90,7 +90,7 @@ const SimpleGridMenu = ({ content, closeMenu }: SimpleGridMenuProps) => {
           <Link
             href={hrefWithUtmParams(`/resources/customer-stories${getUrl(promo)}`, locationSearch?.search)}
             onClick={closeMenu}
-            className="bg-[#111] text-white px-4 py-3 rounded-md font-medium flex justify-center items-center gap-2 transition-all hover:bg-[#595959]"
+            className="flex-center bg-[#111] text-white px-4 py-3 rounded-md font-medium gap-2 transition-all hover:bg-[#595959]"
             {...parseDataAttributes(promo?.dataAttributes)}
           >
             {promo.ctaButton || ''}

@@ -6,6 +6,7 @@ import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import MobileSubDrawer from './MobileSubDrawer';
 import { hrefWithUtmParams, parseDataAttributes, useLocationSearch } from '@/lib/helper/helper';
+import Button from '@/components/common/Button/Button';
 
 interface LocaleItem {
   code: string;
@@ -93,8 +94,8 @@ const MobileMenuDrawer = ({
 
         <div className="relative w-full overflow-hidden">
           <div className={`w-full transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${(activeCategory || isLocaleMode)
-              ? '-translate-x-full opacity-0 pointer-events-none absolute'
-              : 'translate-x-0 opacity-100 relative'
+            ? '-translate-x-full opacity-0 pointer-events-none absolute'
+            : 'translate-x-0 opacity-100 relative'
             }`}>
             <nav className="flex flex-col gap-3">
               {navigationData?.map((item) => (
@@ -128,8 +129,8 @@ const MobileMenuDrawer = ({
             </nav>
           </div>
           <div className={`w-full transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${(activeCategory || isLocaleMode)
-              ? 'translate-x-0 relative'
-              : 'translate-x-full absolute top-0'
+            ? 'translate-x-0 relative'
+            : 'translate-x-full absolute top-0'
             }`}>
             <MobileSubDrawer
               category={activeCategory}
@@ -144,23 +145,19 @@ const MobileMenuDrawer = ({
         </div>
         <div className="mt-auto pt-5 flex flex-col gap-[10px] bg-[#F7F6F5]">
           <Link
-            href={hrefWithUtmParams('/login', locationSearch.search)}
-            className="w-full bg-white border border-[#e0e0e0] rounded-lg font-medium text-[#121212] py-[11px] text-center"
+            href={contactUsUrl}
+            className="[&_button]:max-lg:w-full"
             onClick={handleCloseAll}
           >
-            {translationsText['Login'] || 'Login'}
+            <Button variant="secondary" label={`${translationsText['Get in Touch'] || 'Get in Touch'}`} />
           </Link>
 
           <Link
-            href={hrefWithUtmParams(contactUsUrl, locationSearch.search)}
-            className="w-full text-base bg-[#111] text-white border border-[#111] rounded-lg font-medium flex items-center justify-center gap-[10px] py-[11px]"
+            href={hrefWithUtmParams('/login', locationSearch.search)}
+            className="[&_button]:max-lg:w-full"
             onClick={handleCloseAll}
           >
-            {translationsText['Talk to an expert'] || 'Talk to an expert'}
-            <Image
-              src="https://images.ctfassets.net/h83dujey17us/7zieE00PJ8g5R2nK8ZLz0e/1dbf166b844f8ec0890a371042480343/RightArrowWhiteNew.svg"
-              alt="" width={6} height={10} className="brightness-0 invert w-auto h-auto"
-            />
+            <Button variant="primary" label={`${translationsText['Login'] || 'Login'}`} />
           </Link>
         </div>
       </div>

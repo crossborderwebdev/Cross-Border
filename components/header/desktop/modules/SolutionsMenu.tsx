@@ -80,10 +80,10 @@ const SolutionsMenu = ({ content, closeMenu }: SolutionsMenuProps) => {
             </div>
 
             <div className="flex flex-col gap-2">
-              <p className="text-[20px] font-normal leading-tight text-[#0D0D0D] line-clamp-2">
+              <p className="text-xl font-normal leading-tight text-[#0D0D0D] line-clamp-2">
                 {activeTabData?.pageReference?.seo?.title}
               </p>
-              <p className="text-sm text-[#121212] line-clamp-3">
+              <p className="text-sm text-black line-clamp-3">
                 {activeTabData?.pageReference?.seo?.description}
               </p>
             </div>

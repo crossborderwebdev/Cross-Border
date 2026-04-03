@@ -65,7 +65,7 @@ const IndustriesMenu = ({ content, closeMenu }: IndustriesMenuProps) => {
                                         className="group flex items-center gap-3 p-3 rounded-lg w-[calc(50%-8px)] transition-colors duration-300 hover:bg-[#F7F6F5]"
                                         {...parseDataAttributes(item?.dataAttributes)}
                                     >
-                                        <div className="flex-shrink-0 w-[55px] h-[55px] bg-[#F7F6F5] group-hover:bg-white border border-transparent group-hover:border-[#D1CDCA] rounded-lg flex items-center justify-center transition-colors">
+                                        <div className="flex-center flex-shrink-0 w-[55px] h-[55px] bg-[#F7F6F5] group-hover:bg-white border border-transparent group-hover:border-[#D1CDCA] rounded-lg transition-colors">
                                             <Image
                                                 src={item.icon?.url || "https://images.ctfassets.net/h83dujey17us/1Hu2ASdCdH3K6WfE2ygz8O/146949c577a609668b4b7527bf29b446/searchIcon.svg"}
                                                 alt=""
@@ -96,10 +96,10 @@ const IndustriesMenu = ({ content, closeMenu }: IndustriesMenuProps) => {
                                 </div>
 
                                 <div className="flex flex-col gap-2">
-                                    <p className="text-[20px] font-normal leading-tight text-[#0D0D0D] line-clamp-2">
+                                    <p className="text-xl font-normal leading-tight text-[#0D0D0D] line-clamp-2">
                                         {activeTabData?.pageReference?.seo?.title}
                                     </p>
-                                    <p className="text-sm text-[#121212] line-clamp-3">
+                                    <p className="text-sm text-black line-clamp-3">
                                         {activeTabData?.pageReference?.seo?.description}
                                     </p>
                                 </div>
@@ -108,7 +108,7 @@ const IndustriesMenu = ({ content, closeMenu }: IndustriesMenuProps) => {
                             <Link
                                 href={hrefWithUtmParams(`/resources/customer-stories${getUrl(activeTabData)}`, locationSearch?.search)}
                                 onClick={closeMenu}
-                                className="bg-[#111] text-white px-4 py-3 rounded-md font-medium flex justify-center items-center gap-2 transition-all hover:bg-[#595959]"
+                                className="flex-center bg-[#111] text-white px-4 py-3 rounded-md font-medium gap-2 transition-all hover:bg-[#595959]"
                                 {...parseDataAttributes(activeTabData?.dataAttributes)}
                             >
                                 {activeTabData?.ctaButton || 'Learn More'}

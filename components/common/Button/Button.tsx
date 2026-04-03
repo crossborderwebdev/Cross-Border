@@ -7,13 +7,13 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button = ({ variant = 'primary', label, className = '', ...props }: ButtonProps) => {
     // Base styles for all buttons
-    const baseStyles = "inline-flex items-center justify-center gap-3 px-8 py-3 rounded-lg font-bold transition-all duration-200 cursor-pointer active:bg-[#6A6466] disabled:bg-[#6A6466]";
+    const baseStyles = "inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-bold transition-all duration-200 cursor-pointer";
 
     // Variant specific styles
     const variants = {
-        primary: "bg-black text-white hover:bg-[#312E2F]",
-        secondary: "bg-white text-[#312E2F] border-2 border-black hover:bg-gray-100",
-        link: "bg-transparent text-black hover:opacity-70 !px-0",
+        primary: "bg-black hover:bg-secondary-black active:bg-tertiary-black text-white",
+        secondary: "bg-white text-black border-2 border-black hover:text-secondary-black active:text-tertiary-black hover:border-secondary-black",
+        link: "bg-transparent text-black hover:text-secondary-black active:text-tertiary-black disabled:text-tertiary-black !px-0",
     };
 
     return (

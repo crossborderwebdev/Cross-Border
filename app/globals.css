@@ -1,19 +1,45 @@
 @import "tailwindcss";
 
 @theme {
-  --color-black: #1f1f1f;
+  /* --color-black: #000;
+  --color-light-black: #1f1f1f;
   --color-white: #fff;
   --color-red: #B9194A;
+  --color-hover-black: #312E2F;
+  --color-pressed-black: #6A6466; */
+
+
+
+  /* --color-primary-black: #000; */
+  --color-secondary-black: #312E2F;
+  --color-tertiary-black: #6A6466;
+  /* --color-white: #fff; */
+  --color-brand-red: #B9194A;
 
   /* Custom Widths */
   --spacing-main-container: 1440px;
 }
 
-/* Base styles (Jo pehle @layer base mein thay) */
 @layer base {
   body {
     background-color: var(--color-white);
-    color: var(--color-black);
+    color: var(--color-primary-black);
     font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Optional: A column version */
+  .flex-col-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

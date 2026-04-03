@@ -62,7 +62,7 @@ const testimonialSliderBreakpoints = {
 export default function Bottom({ data = teamDummyData }: { data?: any }) {
     return (
         <section className="relative w-full pt-10 md:pt-24 pb-30 md:pb-60 text-white overflow-hidden bg-[linear-gradient(180deg,#C76F96_0%,#B54275_10%,#522F42_100%)]">
-            <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col gap-20">
+            <div className="max-w-main-container mx-auto px-6 lg:px-12 flex flex-col gap-20">
 
                 {/* Section 1: Video & Content */}
                 <Team data={data.hero} />

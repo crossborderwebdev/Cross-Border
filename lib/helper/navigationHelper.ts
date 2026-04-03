@@ -47,67 +47,67 @@ export const regionalLocales = [
 
 export const localeText = {
     'en-US': {
-        'Talk to an expert': 'Talk to an expert',
+        'Get in Touch': 'Get in Touch',
         Login: 'Login'
     },
     'fr-CA': {
-        'Talk to an expert': 'Parlez à un expert',
+        'Get in Touch': 'Contactez-nous',
         Login: 'Connexion'
     },
     'en-GB': {
-        'Talk to an expert': 'Talk to an expert',
+        'Get in Touch': 'Get in Touch',
         Login: 'Login'
     },
     'en-AU': {
-        'Talk to an expert': 'Talk to an expert',
+        'Get in Touch': 'Get in Touch',
         Login: 'Login'
     },
     'en-NZ': {
-        'Talk to an expert': 'Talk to an expert',
+        'Get in Touch': 'Get in Touch',
         Login: 'Login'
     },
     'en-SG': {
-        'Talk to an expert': 'Talk to an expert',
+        'Get in Touch': 'Get in Touch',
         Login: 'Login'
     },
     it: {
-        'Talk to an expert': 'Parla con un esperto',
+        'Get in Touch': 'Mettiti in Contatto',
         Login: 'Accedere'
     },
     es: {
-        'Talk to an expert': 'Hable con un experto',
+        'Get in Touch': 'Ponte en Contacto',
         Login: 'Acceso'
     },
     'en-CHI': {
-        'Talk to an expert': 'Talk to an expert',
+        'Get in Touch': 'Get in Touch',
         Login: 'Login'
     },
     'en-IE': {
-        'Talk to an expert': 'Talk to an expert',
+        'Get in Touch': 'Get in Touch',
         Login: 'Login'
     },
     sv: {
-        'Talk to an expert': 'Prata med en expert',
+        'Get in Touch': 'Hör av Dig',
         Login: 'Logga in'
     },
     'fr-CH': {
-        'Talk to an expert': 'Parlez à un expert',
+        'Get in Touch': 'Contactez-nous',
         Login: 'Connexion'
     },
     'de-CH': {
-        'Talk to an expert': 'Mit einem Experten sprechen',
+        'Get in Touch': 'Kontaktieren Sie Uns',
         Login: 'Anmeldung'
     },
     pt: {
-        'Talk to an expert': 'Fale com um especialista',
+        'Get in Touch': 'Entre em Contato',
         Login: 'Entrar'
     },
     'en-LU': {
-        'Talk to an expert': 'Talk to an expert',
+        'Get in Touch': 'Get in Touch',
         Login: 'Login'
     },
     'nl-NL': {
-        'Talk to an expert': 'Praat met een expert',
+        'Get in Touch': 'Neem Contact Op',
         Login: 'Inloggen'
     }
 };

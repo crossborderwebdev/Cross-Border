@@ -17,7 +17,7 @@ export default function Team({ data }: any) {
 
             <div className="max-w-[545px] lg:max-w-[384px]">
                 <h2 className="text-center lg:text-left text-5xl font-bold mb-6">{data.title}</h2>
-                <p className="text-center lg:text-left text-[20px] text-white/80 leading-relaxed">
+                <p className="text-center lg:text-left text-xl text-white/80 leading-relaxed">
                     {data.description}
                 </p>
             </div>

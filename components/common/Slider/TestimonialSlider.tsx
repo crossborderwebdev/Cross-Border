@@ -25,7 +25,7 @@ export default function TestimonialSlider({ data, breakPoints }: any) {
                         </div>
                         <div>
                             <p className="font-bold">{item.author}</p>
-                            <p className="text-pink-600 text-sm">{item.company}</p>
+                            <p className="text-brand-red text-sm">{item.company}</p>
                         </div>
                     </div>
                 </div>

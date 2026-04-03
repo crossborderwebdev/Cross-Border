@@ -66,7 +66,7 @@ export default function Awards({ data = awardsDummyData }: { data?: any }) {
                     <h2 className="text-center md:text-left text-[30px] md:text-[48px] font-bold text-black mb-6 leading-tight">
                         {data?.title}
                     </h2>
-                    <p className="text-center md:text-left text-[20px] font-normal text-gray-700 leading-relaxed mb-10 md:mb-30 md:max-w-xl">
+                    <p className="text-center md:text-left text-xl font-normal text-black leading-relaxed mb-10 md:mb-30 md:max-w-xl">
                         {data?.description}
                     </p>
 

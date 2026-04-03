@@ -53,7 +53,7 @@ export default function Partner({ data = dummyData }: { data?: any }) {
                     <h2 className="text-[30px] md:text-[48px] text-center md:text-left font-bold text-black mb-6 leading-tight">
                         {data?.title}
                     </h2>
-                    <p className="text-[20px] text-center md:text-left font-normal text-gray-700 leading-relaxed mb-10 max-w-2xl">
+                    <p className="text-xl text-center md:text-left font-normal text-black leading-relaxed mb-10 max-w-2xl">
                         {data?.description}
                     </p>
 

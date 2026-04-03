@@ -12,7 +12,7 @@ export default function Hero() {
                         Streamline cross-border payments
                     </h1>
                     
-                    <p className="text-[20px] text-white/70 leading-relaxed mb-8 max-w-[455px] lg:mx-0 mx-auto">
+                    <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-[455px] lg:mx-0 mx-auto">
                         Simplify the way you connect with the global marketplace. Our world-class trading platform and integrated payment solutions can be customized to your unique business requirements.
                     </p>
 

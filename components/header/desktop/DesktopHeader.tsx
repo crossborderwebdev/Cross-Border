@@ -7,6 +7,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { parseDataAttributes } from '@/lib/helper/helper';
 import { getContactUsUrl } from '@/lib/helper/navigationHelper';
 import dynamic from 'next/dynamic';
+import Button from '@/components/common/Button/Button';
 
 const SolutionsMenu = dynamic(() => import('./modules/SolutionsMenu'), { ssr: false });
 const SimpleMenu = dynamic(() => import('./modules/SimpleMenu'), { ssr: false });
@@ -71,7 +72,7 @@ const DesktopHeader = ({ data, regionalLocales, localeText, currentLocale }: Des
 
   return (
     <header ref={headerRef} className="fixed top-0 z-[1000] h-20 w-full border-b border-gray-200 bg-white flex items-center font-medium">
-      <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-10">
+      <div className="mx-auto flex w-full max-w-main-container items-center justify-between px-10">
 
         <div className="flex items-center gap-10">
           <Link href="/" className="flex items-center cursor-pointer">
@@ -96,7 +97,7 @@ const DesktopHeader = ({ data, regionalLocales, localeText, currentLocale }: Des
                 return (
                   <li key={group.sys.id}>
                     <button
-                      className={`cursor-pointer flex items-center gap-1 border-none bg-none p-0 text-base font-normal transition-colors duration-200 ${isActive ? 'text-black font-bold' : 'text-[#121212]'
+                      className={`cursor-pointer flex items-center gap-1 border-none bg-none p-0 text-base font-normal transition-colors duration-200 ${isActive ? 'text-black font-bold' : 'text-black'
                         }`}
                       onClick={() => hasDropdown && setActiveMenuId(isActive ? null : group.sys.id)}
                       {...parseDataAttributes(group?.dataAttributes)}
@@ -128,14 +129,12 @@ const DesktopHeader = ({ data, regionalLocales, localeText, currentLocale }: Des
 
         <div className="flex items-center justify-end gap-6 grow">
           {/* Search, Login, and CTA use translationsText */}
-          <Link href="/login" className="text-base font-normal text-[#121212]">
-            {translationsText['Login'] || 'Login'}
+          <Link href={contactUsUrl}>
+            <Button variant="link" label={`${translationsText['Get in Touch'] || 'Get in Touch'}`} />
           </Link>
 
-          <Link href={contactUsUrl}>
-            <span className="flex items-center gap-1.5 rounded bg-[#111] px-[18px] py-3 text-white text-base font-medium transition-all hover:bg-[#595959]">
-              {translationsText['Talk to an expert'] || 'Talk to an expert'}
-            </span>
+          <Link href="/login" className="text-base font-normal text-black">
+            <Button variant="primary" label={`${translationsText['Login'] || 'Login'}`} />
           </Link>
 
           {/* Locale Selector */}

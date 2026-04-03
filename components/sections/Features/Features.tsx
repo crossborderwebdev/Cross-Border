@@ -17,7 +17,7 @@ export default function Features() {
     return (
         <section className="bg-white px-6 pb-[100px] -mt-[100px]">
             {/* Video Wrapper */}
-            <div className="max-w-[995px] mx-auto mb-20 relative rounded-[24px] overflow-hidden group">
+            <div className="max-w-[995px] mx-auto mb-20 relative rounded-[24px] overflow-hidden group cursor-pointer">
                 <Image
                     src="/assets/videoPoster.png"
                     alt="Video"
@@ -25,10 +25,9 @@ export default function Features() {
                     height={675}
                     className="h-auto w-full"
                 />
-                {/* Play Button - Only shows on group hover as per your SCSS display:none/flex logic */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-[#db2777] rounded-full hidden group-hover:flex items-center justify-center text-white text-2xl cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-[#be185d]">
+                {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-[#db2777] rounded-full hidden group-hover:flex items-center justify-center text-white text-2xl cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-[#be185d]">
                     ▶
-                </div>
+                </div> */}
             </div>
 
             {/* Header */}
@@ -64,7 +63,7 @@ export default function Features() {
                             width={50}
                             alt='icon'
                         />
-                        <h3 className={`text-[25px] font-bold leading-[1.2] ${cat.active ? 'text-white' : 'text-[#111827]'}`}>
+                        <h3 className={`text-2xl font-bold leading-[1.2] ${cat.active ? 'text-white' : 'text-[#111827]'}`}>
                             {cat.title}
                         </h3>
                     </div>

@@ -30,7 +30,7 @@ export default function FeatureCardSlider({ data, breakPoints }: any) {
                         width={50}
                         height={50}
                     />
-                    <h3 className="mt-3 text-[25px] text-left font-semibold leading-[1.2] w-[120px]">{cat.title}</h3>
+                    <h3 className="mt-3 text-2xl text-left font-semibold leading-[1.2] w-[120px]">{cat.title}</h3>
                 </div>
             )}
         />
