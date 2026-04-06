@@ -21,7 +21,7 @@ export default function FeatureCardSlider({ data, breakPoints }: any) {
                     p-10 flex flex-col gap-6  w-full h-[236px] text-center shadow-[1px_4px_30px_0px_#00000026] rounded-xl
                     ${cat.active
                         ? 'bg-[linear-gradient(180deg,#212121_-10.28%,#582D43_58.62%,#C43776_111.16%)] text-white'
-                        : 'bg-[#f9fafb] text-gray-900'
+                        : 'bg-white text-gray-900'
                     }
                 `}>
                     <Image

@@ -6,7 +6,7 @@ const awardsDummyData = {
     description: "Our main goal as an organization is keeping our customers satisfied, and providing them with tools to suppor t their growth in a changing global economy. We are committed to adding new features and benefits to our solution set for our clients many of whom have long tenures with Corpay. These innovations often earn us recognition and accolades from various industr y professionals and publications",
     heroImage: {
         sys: { id: 'h1' },
-        url: '/assets/award.png',
+        url: '/assets/awardsnew.png',
         title: 'Trophy Award',
     },
     awardsCollection: {
@@ -41,9 +41,8 @@ export default function Awards({ data = awardsDummyData }: { data?: any }) {
             className="py-2 md:py-10 lg:pb-30 overflow-hidden"
             style={{ background: 'linear-gradient(180deg,rgba(247, 246, 245, 1) 60%, rgba(244, 185, 99, 1) 100%)' }}
         >
-            <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row items-center gap-12 lg:gap-16">
+            <div className="max-w-[1900px] mx-auto flex flex-col md:flex-row items-center gap-0 md:gap-8 xl:gap-16">
 
-                {/* Left Side: Image */}
                 <div className="hidden md:block flex-1 relative">
                     {sectionImage ? (
                         <div className="relative h-[610px] rounded-tr-[30px] rounded-br-[200px] lg:rounded-br-[240px] overflow-hidden shadow-2xl">
@@ -57,12 +56,12 @@ export default function Awards({ data = awardsDummyData }: { data?: any }) {
                             />
                         </div>
                     ) : (
-                        <div className="bg-gray-200 h-[600px] w-full rounded-tr-[20px] rounded-bl-[240px]" />
+                        <div className="bg-gray-200 h-[610px] w-full rounded-tr-[20px] rounded-bl-[240px]" />
                     )}
                 </div>
 
                 {/* Right Side: Content and Slider */}
-                <div className="flex-1 w-full px-6 md:px-0 md:pr-5 overflow-hidden">
+                <div className="w-full md:w-1/2 max-w-[600px] me-0 xl:me-[10%] px-6 md:px-0 md:pe-6 xl:pe-0">
                     <h2 className="text-center md:text-left text-[30px] md:text-[48px] font-bold text-black mb-6 leading-tight">
                         {data?.title}
                     </h2>
@@ -71,7 +70,7 @@ export default function Awards({ data = awardsDummyData }: { data?: any }) {
                     </p>
 
                     {/* CSS Slider Container hello world */}
-                    <div className="md:max-w-[600px]">
+                    <div>
                         <AwardSlider data={images} breakPoints={awardBreakpoints} />
                     </div>
                 </div>

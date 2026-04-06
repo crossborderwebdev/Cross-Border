@@ -7,7 +7,7 @@ const dummyData: any = {
     description: "As your trusted partner, we help solve the challenges of processing payments, enabling your organization to create, integrate, service, and scale a world-class currency and payments offering. We aim to enhance your offering with new payments and risk management capabilities, or process transactions on behalf of your customers, fueling your strategic growth. We're proud to partner with these leading organizations and associations.",
     image: {
         sys: { id: '1' },
-        url: '/assets/partners.png',
+        url: '/assets/partnersnew.png',
         title: 'Partners working together',
     },
     partnerLogosCollection: {
@@ -45,11 +45,10 @@ export default function Partner({ data = dummyData }: { data?: any }) {
     const sectionImage = data?.image?.url;
 
     return (
-        <section className="py-20 px-6 md:ps-6 md:pe-0 overflow-hidden" style={{ background: 'linear-gradient(180deg,rgba(180, 211, 235, 1) 50%, rgba(247, 246, 245, 1) 100%)' }}>
-            <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-4 lg:gap-16">
+        <section className="py-20" style={{ background: 'linear-gradient(180deg,rgba(180, 211, 235, 1) 50%, rgba(247, 246, 245, 1) 100%)' }}>
+            <div className="max-w-[1900px] mx-auto flex flex-col md:flex-row items-center gap-0 md:gap-8 xl:gap-16">
 
-                {/* Left Side: Content and Logos */}
-                <div className="w-full md:w-1/2">
+                <div className="w-full md:w-1/2 max-w-[600px] ms-0 xl:ms-[10%] px-6 md:px-0 md:ps-6 xl:ps-0">
                     <h2 className="text-[30px] md:text-[48px] text-center md:text-left font-bold text-black mb-6 leading-tight">
                         {data?.title}
                     </h2>
@@ -64,11 +63,10 @@ export default function Partner({ data = dummyData }: { data?: any }) {
                     </div>
                 </div>
 
-                {/* Right Side: Image */}
                 <div className="hidden md:flex w-1/2 relative w-full md:min-h-[500px]">
                     {sectionImage ? (
                         /* Memory: rounded-tl-[20px] and rounded-bl-[200px] */
-                        <div className="relative h-[600px] w-full rounded-tl-[20px] rounded-bl-[200px] lg:rounded-bl-[240px] overflow-hidden shadow-2xl ">
+                        <div className="relative h-[610px] w-full rounded-tl-[20px] rounded-bl-[200px] lg:rounded-bl-[240px] overflow-hidden shadow-2xl ">
                             <Image
                                 src={sectionImage}
                                 alt={data?.image?.title || "Partners"}
@@ -81,7 +79,7 @@ export default function Partner({ data = dummyData }: { data?: any }) {
                             />
                         </div>
                     ) : (
-                        <div className="bg-gray-200 h-[500px] w-full rounded-bl-[200px]" />
+                        <div className="bg-gray-200 h-[610px] w-full rounded-bl-[200px]" />
                     )}
                 </div>
 
