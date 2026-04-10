@@ -1,45 +1,70 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-  /* --color-black: #000;
-  --color-light-black: #1f1f1f;
-  --color-white: #fff;
-  --color-red: #B9194A;
-  --color-hover-black: #312E2F;
-  --color-pressed-black: #6A6466; */
-
-
-
-  /* --color-primary-black: #000; */
-  --color-secondary-black: #312E2F;
-  --color-tertiary-black: #6A6466;
-  /* --color-white: #fff; */
-  --color-brand-red: #B9194A;
-
-  /* Custom Widths */
-  --spacing-main-container: 1440px;
+  --color-primary: #000000;
+  --color-secondary: #B9194A;
+  --color-accent: #ffffff;
+  --color-grey-100: #312E2F;
+  --color-grey-200: #6A6466;
 }
 
 @layer base {
-  body {
-    background-color: var(--color-white);
-    color: var(--color-primary-black);
-    font-family: 'Inter', sans-serif;
+  h1 {
+    @apply text-4xl lg:text-5xl font-semibold;
+  }
+
+  h2 {
+    @apply text-3xl lg:text-4xl font-semibold;
+  }
+
+  h3 {
+    @apply text-2xl lg:text-3xl font-semibold;
+  }
+
+  h4 {
+    @apply text-2xl font-medium;
+  }
+
+  h5 {
+    @apply text-xl;
+  }
+
+  h6 {
+    @apply text-lg;
+  }
+
+  p {
+    @apply text-base text-primary;
+  }
+
+  ul,
+  ol {
+    @apply text-lg;
   }
 }
 
-@layer utilities {
-  .flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@layer components {
+  .btn {
+    @apply inline-flex items-center cursor-pointer gap-2.5 px-5 py-4 text-base font-medium rounded-md bg-primary text-accent border border-transparent transition duration-200;
   }
 
-  /* Optional: A column version */
-  .flex-col-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .btn-primary {
+    @apply bg-primary text-accent border-black hover:bg-grey-100 focus:bg-grey-200;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent text-black border-black hover:border-grey-100 hover:text-grey-100 focus:text-grey-200 focus:border-grey-200;
+  }
+
+  .btn-link {
+    @apply bg-transparent text-black border-0 hover:text-grey-100 focus:text-grey-200;
+  }
+
+  .btn-menu-link {
+    @apply px-3 py-1.5 bg-transparent text-grey-200 border-0 hover:text-[#101010];
+  }
+
+  .btn-nav-link {
+    @apply px-2.5 py-2 border-0 hover:bg-[#01010133];
   }
 }

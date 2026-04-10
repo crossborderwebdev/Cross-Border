@@ -39,7 +39,7 @@ export default function Slider({
                 className="mySwiper"
             >
                 {items.map((item, i) => (
-                    <SwiperSlide key={i} className="flex-center">
+                    <SwiperSlide key={i} className="flex items-center justify-center">
                         {renderItem(item, i)}
                     </SwiperSlide>
                 ))}

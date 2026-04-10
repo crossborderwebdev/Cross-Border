@@ -90,7 +90,7 @@ const SimpleGridMenu = ({ content, closeMenu }: SimpleGridMenuProps) => {
           <Link
             href={hrefWithUtmParams(`/resources/customer-stories${getUrl(promo)}`, locationSearch?.search)}
             onClick={closeMenu}
-            className="flex-center bg-[#111] text-white px-4 py-3 rounded-md font-medium gap-2 transition-all hover:bg-[#595959]"
+            className="flex items-center justify-center bg-[#111] text-white px-4 py-3 rounded-md font-medium gap-2 transition-all hover:bg-[#595959]"
             {...parseDataAttributes(promo?.dataAttributes)}
           >
             {promo.ctaButton || ''}

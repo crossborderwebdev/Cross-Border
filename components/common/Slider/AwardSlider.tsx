@@ -17,7 +17,7 @@ export default function AwardSlider({ data, breakPoints }: any) {
             centeredSlides={breakPoints.centeredSlides}
             breakpoints={breakPoints.breakPoints}
             renderItem={(cat) => (
-                <div className={`flex-center w-full h-[123px] bg-white rounded-xl shadow-sm`}>
+                <div className={`flex items-center justify-center w-full h-[123px] bg-white rounded-xl shadow-sm`}>
                     <Image src={cat} width={140} height={50} alt="" className="h-auto w-auto" />
                 </div>
             )}

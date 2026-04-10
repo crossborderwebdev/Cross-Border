@@ -97,7 +97,7 @@ const FooterController = () => {
                 <div className="max-w-[870px] mx-auto text-center mx-auto space-y-8">
                     <p className="text-[16px] text-white leading-relaxed">© 2026 Corpay, Inc. The Corpay logo is owned by Corpay. All third-party marks and/or logos displayed herein are registered ® or claimed ™ trademarks of their respective owners. Corpay respects all trademark rights.</p>
 
-                    <div className="flex-center cursor-pointer">
+                    <div className="flex items-center justify-center cursor-pointer">
                         <Link href="/">
                             <span className="text-2xl font-bold tracking-tight">Corpay</span>
                             <span className="text-[#ff4d4d] text-xl font-bold">^</span>

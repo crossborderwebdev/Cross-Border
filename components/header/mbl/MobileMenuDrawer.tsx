@@ -6,7 +6,7 @@ import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import MobileSubDrawer from './MobileSubDrawer';
 import { hrefWithUtmParams, parseDataAttributes, useLocationSearch } from '@/lib/helper/helper';
-import Button from '@/components/common/Button/Button';
+import Button from '@/components/common/Button';
 
 interface LocaleItem {
   code: string;

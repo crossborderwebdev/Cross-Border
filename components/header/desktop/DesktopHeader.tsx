@@ -7,7 +7,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { parseDataAttributes } from '@/lib/helper/helper';
 import { getContactUsUrl } from '@/lib/helper/navigationHelper';
 import dynamic from 'next/dynamic';
-import Button from '@/components/common/Button/Button';
+import Button from '@/components/common/Button';
 
 const SolutionsMenu = dynamic(() => import('./modules/SolutionsMenu'), { ssr: false });
 const SimpleMenu = dynamic(() => import('./modules/SimpleMenu'), { ssr: false });

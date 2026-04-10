@@ -65,7 +65,7 @@ const IndustriesMenu = ({ content, closeMenu }: IndustriesMenuProps) => {
                                         className="group flex items-center gap-3 p-3 rounded-lg w-[calc(50%-8px)] transition-colors duration-300 hover:bg-[#F7F6F5]"
                                         {...parseDataAttributes(item?.dataAttributes)}
                                     >
-                                        <div className="flex-center flex-shrink-0 w-[55px] h-[55px] bg-[#F7F6F5] group-hover:bg-white border border-transparent group-hover:border-[#D1CDCA] rounded-lg transition-colors">
+                                        <div className="flex items-center justify-center flex-shrink-0 w-[55px] h-[55px] bg-[#F7F6F5] group-hover:bg-white border border-transparent group-hover:border-[#D1CDCA] rounded-lg transition-colors">
                                             <Image
                                                 src={item.icon?.url || "https://images.ctfassets.net/h83dujey17us/1Hu2ASdCdH3K6WfE2ygz8O/146949c577a609668b4b7527bf29b446/searchIcon.svg"}
                                                 alt=""
@@ -108,7 +108,7 @@ const IndustriesMenu = ({ content, closeMenu }: IndustriesMenuProps) => {
                             <Link
                                 href={hrefWithUtmParams(`/resources/customer-stories${getUrl(activeTabData)}`, locationSearch?.search)}
                                 onClick={closeMenu}
-                                className="flex-center bg-[#111] text-white px-4 py-3 rounded-md font-medium gap-2 transition-all hover:bg-[#595959]"
+                                className="flex items-center justify-center bg-[#111] text-white px-4 py-3 rounded-md font-medium gap-2 transition-all hover:bg-[#595959]"
                                 {...parseDataAttributes(activeTabData?.dataAttributes)}
                             >
                                 {activeTabData?.ctaButton || 'Learn More'}

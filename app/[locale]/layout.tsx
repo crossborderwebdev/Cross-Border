@@ -12,10 +12,10 @@ export default async function LocaleLayout({
     const { locale } = await params;
 
     return (
-        <section lang={locale}>
-            <HeaderController locale={locale} />
+        <>
+            {/* <HeaderController locale={locale} /> */}
             <main>{children}</main>
-            <FooterController />
-        </section>
+            {/* <FooterController /> */}
+        </>
     );
 }
