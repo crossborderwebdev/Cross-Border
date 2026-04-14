@@ -1,18 +1,10 @@
-import Image from "next/image";
-import TileBlock from "@/components/sections/Block/TileBlock";
-
-type Props = {}
-
 const LeftVideoContentBlock = ({ entry }: { entry: any }) => {
     const videoUrl = entry?.fields?.video?.fields?.file?.url;
     const videoType = entry?.fields?.video?.fields?.file?.contentType || "video/mp4";
-    const posterImage = entry?.fields?.image?.fields?.file?.url; // optional poster
-    const videoAlt = entry?.fields?.video?.fields?.title || "Video";
+    const posterImage = entry?.fields?.image?.fields?.file?.url;
     return (
-        <div className='bg-[linear-gradient(180deg,#C76F96_0%,#B54275_10%,#522F42_100%)] py-12'>
+        <div className='py-12'>
             <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20">
-
-                {/* Left: Video */}
                 <div className="max-w-[560px] w-full flex-1 relative group rounded-2xl overflow-hidden shadow-2xl border border-white/10">
                     {videoUrl ? (
                         <video
@@ -29,8 +21,6 @@ const LeftVideoContentBlock = ({ entry }: { entry: any }) => {
                         </div>
                     )}
                 </div>
-
-                {/* Right: Content */}
                 <div className="max-w-[545px] lg:max-w-[384px] text-white">
                     <h2
                         className="text-center lg:text-left text-5xl font-bold mb-6"

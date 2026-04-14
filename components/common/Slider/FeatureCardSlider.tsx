@@ -16,21 +16,22 @@ export default function FeatureCardSlider({ data, breakPoints }: any) {
             spaceBetween={breakPoints.spaceBetween}
             breakpoints={breakPoints.breakPoints || null}
             centeredSlides={breakPoints.centeredSlides}
-            renderItem={(cat) => (
+            renderItem={(item) => (
                 <div className={`
                     p-10 flex flex-col gap-6  w-full h-[236px] text-center shadow-[1px_4px_30px_0px_#00000026] rounded-xl
-                    ${cat.active
+                    ${item?.sys?.id === "1oOFtNabeMz8gGDEzbjgZO"
                         ? 'bg-[linear-gradient(180deg,#212121_-10.28%,#582D43_58.62%,#C43776_111.16%)] text-white'
                         : 'bg-white text-gray-900'
                     }
                 `}>
                     <Image
-                        src={cat.icon}
+                        src={item?.fields?.icon?.fields?.file?.url}
                         alt={`card`}
                         width={50}
                         height={50}
+                        className={`${item?.sys?.id === "1oOFtNabeMz8gGDEzbjgZO" ? 'invert' : ''}`}
                     />
-                    <h3 className="mt-3 text-2xl text-left font-semibold leading-[1.2] w-[120px]">{cat.title}</h3>
+                    <h3 className="mt-3 text-2xl text-left font-semibold leading-[1.2] w-[120px]">{item?.fields?.linkText}</h3>
                 </div>
             )}
         />

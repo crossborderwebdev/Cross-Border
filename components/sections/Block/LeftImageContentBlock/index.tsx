@@ -7,7 +7,6 @@ const LeftImageContentBlock = ({ entry }: { entry: any }) => {
     return (
         <div
             className="py-2 md:py-10 lg:pb-30 overflow-hidden"
-            style={{ background: 'linear-gradient(180deg,rgba(247, 246, 245, 1) 60%, rgba(244, 185, 99, 1) 100%)' }}
         >
             <div className="max-w-[1900px] mx-auto flex flex-col md:flex-row items-center gap-0 md:gap-8 xl:gap-16">
 

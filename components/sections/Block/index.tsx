@@ -2,11 +2,15 @@
 import Hero from '@/components/sections/Block/Hero/Hero';
 import ContentBlock from '@/components/sections/Block/ContentBlock';
 import TileBlock from './TileBlock';
+import VideoBlock from './VideoBlock';
+import TextBlock from './TextBlock';
 
 const componentMap: any = {
     heroBlock: Hero,
     contentBlock: ContentBlock,
     tileBlock: TileBlock,
+    videoBlock: VideoBlock,
+    commonTextBlock: TextBlock,
 };
 
 export const BlockRenderer = ({ key, data }: { key?: string; data: any }) => {
