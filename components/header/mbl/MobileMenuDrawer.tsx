@@ -149,7 +149,7 @@ const MobileMenuDrawer = ({
             className="[&_button]:max-lg:w-full"
             onClick={handleCloseAll}
           >
-            <Button variant="secondary" label={`${translationsText['Get in Touch'] || 'Get in Touch'}`} />
+            {/* <Button variant="secondary" label={`${translationsText['Get in Touch'] || 'Get in Touch'}`} /> */}
           </Link>
 
           <Link
@@ -157,7 +157,7 @@ const MobileMenuDrawer = ({
             className="[&_button]:max-lg:w-full"
             onClick={handleCloseAll}
           >
-            <Button variant="primary" label={`${translationsText['Login'] || 'Login'}`} />
+            {/* <Button variant="primary" label={`${translationsText['Login'] || 'Login'}`} /> */}
           </Link>
         </div>
       </div>

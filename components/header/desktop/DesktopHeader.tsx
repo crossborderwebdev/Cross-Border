@@ -130,11 +130,11 @@ const DesktopHeader = ({ data, regionalLocales, localeText, currentLocale }: Des
         <div className="flex items-center justify-end gap-6 grow">
           {/* Search, Login, and CTA use translationsText */}
           <Link href={contactUsUrl}>
-            <Button variant="link" label={`${translationsText['Get in Touch'] || 'Get in Touch'}`} />
+            {/* <Button variant="link" label={`${translationsText['Get in Touch'] || 'Get in Touch'}`} /> */}
           </Link>
 
           <Link href="/login" className="text-base font-normal text-black">
-            <Button variant="primary" label={`${translationsText['Login'] || 'Login'}`} />
+            {/* <Button variant="primary" label={`${translationsText['Login'] || 'Login'}`} /> */}
           </Link>
 
           {/* Locale Selector */}
