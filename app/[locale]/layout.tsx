@@ -1,5 +1,4 @@
-import HeaderController from "@/components/header/HeaderController";
-import FooterController from "@/components/footer/FooterController";
+
 import { ContentfulLivePreviewProvider } from "@contentful/live-preview/react";
 
 export default async function LocaleLayout({
@@ -13,9 +12,7 @@ export default async function LocaleLayout({
 
     return (
         <>
-            {/* <HeaderController locale={locale} /> */}
             <main>{children}</main>
-            {/* <FooterController /> */}
         </>
     );
 }
