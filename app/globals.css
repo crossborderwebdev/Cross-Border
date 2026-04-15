@@ -1,4 +1,24 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+
+/* Layout & Spacing */
+@source inline("{gap,pt,pb,px,py,mt,mb}-{1,2,3,4,5,6,8,10,12,16,20,24}");
+
+/* Specific Additions */
+@source inline("gap-[40px]");
+@source inline("pb-30");
+@source inline("-mt-[100px]");
+
+/* Typography */
+@source inline("leading-{3,4,5,6,7,8,9,10,12}");
+@source inline("text-{sm,base,lg,xl,2xl,3xl,4xl,5xl}");
+@source inline("font-{thin,light,normal,medium,semibold,bold,extrabold}");
+
+/* Sizing */
+@source inline("{w,h}-{full,auto}");
+
+/* Gradients */
+@source inline("bg-[linear-gradient(180deg,#C76F96_0%,#B54275_10%,#522F42_100%)]");
+@source inline("bg-[linear-gradient(180deg,rgba(180,211,235,0.61)_0%,rgba(247,246,245,0.79)_40%,#f4f1ec_65%,rgba(244,185,99,0.57)_100%)]");
 
 @theme {
   --color-primary: #000000;
