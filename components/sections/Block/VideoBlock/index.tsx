@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
 const VideoBlock = ({ entry }: { entry: any }) => {
-    console.log(entry, 'entryssss')
 
     const posterUrl = entry?.fields?.poster?.fields?.file?.url
         ? `https:${entry?.fields?.poster?.fields?.file?.url}`

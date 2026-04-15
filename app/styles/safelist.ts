@@ -12,5 +12,6 @@ const safelist = [
     'leading-3', 'leading-4', 'leading-5', 'leading-6', 'leading-7', 'leading-8', 'leading-9', 'leading-10', 'leading-12',
     'text-sm', 'text-base', 'text-lg', 'text-xl', 'text-2xl', 'text-3xl', 'text-4xl', 'text-5xl',
     'font-thin', 'font-light', 'font-normal', 'font-medium', 'font-semibold', 'font-bold', 'font-extrabold',
-    'w-full', 'w-auto', 'h-full', 'h-auto'
+    'w-full', 'w-auto', 'h-full', 'h-auto',
+    'bg-[linear-gradient(180deg,#C76F96_0%,#B54275_10%,#522F42_100%)]', 'bg-[linear-gradient(180deg,rgba(180,211,235,0.61)_0%,rgba(247,246,245,0.79)_40%,#f4f1ec_65%,rgba(244,185,99,0.57)_100%)]'
 ];
