@@ -4,7 +4,7 @@ import StatsBlock from '../StatsBlock';
 
 export default function Hero({ entry }: { entry: any }) {
     return (
-        <div className="relative min-h-[700px] flex items-center py-20 px-6 pb-[200px] text-white bg-[linear-gradient(180deg,#212121_-10.28%,#582D43_58.62%,#C43776_111.16%)]">
+        <div className="relative min-h-[700px] flex items-center py-20 px-6 pb-[200px] text-white">
             <div className="max-w-[1200px] mx-auto w-full flex flex-col lg:flex-row items-center justify-between lg:text-left text-center">
 
                 {/* Content Area */}

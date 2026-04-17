@@ -88,3 +88,21 @@
     @apply px-2.5 py-2 border-0 hover:bg-[#01010133];
   }
 }
+
+
+
+.heroGradient {
+  background: linear-gradient(180deg, #C76F96 0%, #B54275 10%, #522F42 100%);
+}
+
+.gradientTwo {
+  background: linear-gradient(180deg,
+      rgba(180, 211, 235, 0.61) 0%,
+      rgba(247, 246, 245, 0.79) 40%,
+      #f4f1ec 65%,
+      rgba(244, 185, 99, 0.57) 100%);
+}
+
+.gap40 {
+  gap: 40px;
+}
