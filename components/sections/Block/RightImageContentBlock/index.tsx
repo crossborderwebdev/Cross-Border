@@ -1,9 +1,11 @@
 import Image from "next/image";
 import TileBlock from "@/components/sections/Block/TileBlock";
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 const RightImageContentBlock = ({ entry }: { entry: any }) => {
     const imageUrl = entry?.fields?.image?.fields?.file?.url;
     const imageAlt = entry?.fields?.image?.fields?.title || "Content Image";
+    const richContent = entry?.fields?.description;
     return (
         <div
             className="py-20"
@@ -18,12 +20,10 @@ const RightImageContentBlock = ({ entry }: { entry: any }) => {
                     >
                         {entry?.fields?.title}
                     </h2>
-                    <p
-                        className="text-xl text-center md:text-left font-normal text-black leading-relaxed mb-10 max-w-2xl"
-
-                    >
-                        {entry?.fields?.description}
-                    </p>
+                    
+                    <div className="rich-text-wrapper text-center md:text-left text-primary mb-10">
+                        {richContent && documentToReactComponents(richContent)}
+                    </div>
 
                     {entry?.fields?.tile && (
                         <div className="w-full" >

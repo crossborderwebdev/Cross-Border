@@ -1,7 +1,10 @@
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
 const LeftVideoContentBlock = ({ entry }: { entry: any }) => {
     const videoUrl = entry?.fields?.video?.fields?.file?.url;
     const videoType = entry?.fields?.video?.fields?.file?.contentType || "video/mp4";
     const posterImage = entry?.fields?.image?.fields?.file?.url;
+    const richContent = entry?.fields?.description;
     return (
         <div className='py-12'>
             <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20">
@@ -28,11 +31,9 @@ const LeftVideoContentBlock = ({ entry }: { entry: any }) => {
                         {entry?.fields?.title}
                     </h2>
 
-                    <p
-                        className="text-center lg:text-left text-xl text-white/80 leading-relaxed"
-                    >
-                        {entry?.fields?.description}
-                    </p>
+                    <div className="rich-text-wrapper text-center lg:text-left text-white/80">
+                        {richContent && documentToReactComponents(richContent)}
+                    </div>
                 </div>
 
             </div>
