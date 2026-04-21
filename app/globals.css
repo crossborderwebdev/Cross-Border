@@ -20,6 +20,8 @@
 @source inline("bg-[linear-gradient(180deg,#C76F96_0%,#B54275_10%,#522F42_100%)]");
 @source inline("bg-[linear-gradient(180deg,rgba(180,211,235,0.61)_0%,rgba(247,246,245,0.79)_40%,#f4f1ec_65%,rgba(244,185,99,0.57)_100%)]");
 
+@source "../lib/tailwind-safelist.ts";
+
 @theme {
   --color-primary: #000000;
   --color-secondary: #B9194A;
