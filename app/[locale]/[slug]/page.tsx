@@ -15,10 +15,6 @@ export async function generateMetadata(
 ): Promise<Metadata> {
     const { locale, slug } = await params;
     const page = await getPageBySlug(locale, slug, false);
-    
-    if (!page) {
-        return { title: "Corpay Cross-Border" };
-    }
     const seo = page?.fields?.seo as any;
 
     return {
