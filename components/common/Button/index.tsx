@@ -1,9 +1,11 @@
 import { ButtonProps } from "./type";
 
-const Button = ({ entry }: {entry :ButtonProps}) => {
+const Button = ({ entry }: { entry: ButtonProps }) => {
 
-    if(entry?.fields?.buttonStyle === "Primary"){
+    if (entry?.fields?.buttonStyle === "Primary") {
         entry.fields.buttonStyle = "btn-primary";
+    } else if (entry?.fields?.buttonStyle === "Link") {
+        entry.fields.buttonStyle = "btn btn-link text-[#DB4446] p-0";
     }
     const variant = entry?.fields?.buttonStyle || 'btn-primary';
     const label = entry?.fields?.buttonTitle || 'Click Me';

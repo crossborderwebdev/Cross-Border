@@ -1,6 +1,7 @@
 import LeftImageContentBlock from "../LeftImageContentBlock";
 import RightImageContentBlock from "../RightImageContentBlock";
 import LeftVideoContentBlock from "../LeftVideoContentBlock";
+import StepperBlock from "../StepperBlock";
 
 const ContentBlock = ({ entry }: { entry: any }) => {
     const style = entry?.fields?.style;
@@ -12,6 +13,8 @@ const ContentBlock = ({ entry }: { entry: any }) => {
             return <LeftVideoContentBlock entry={entry} />;
         } else if (style === "Left Content Right Image") {
             return <RightImageContentBlock entry={entry} />;
+        } else if(style === "Stepper") {
+            return <StepperBlock entry={entry} />
         }
     }
 

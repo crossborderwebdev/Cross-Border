@@ -1,0 +1,28 @@
+.step-line {
+    position: absolute;
+    left: 7px;
+    top: 16px;
+    bottom: 0;
+    width: 2px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.step-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #B9194A;
+    transition: height 0.8s ease-in-out;
+}
+
+.step-line.is-filled::after {
+    height: 100%;
+}
+
+.is-empty::after {
+    height: 0%;
+}

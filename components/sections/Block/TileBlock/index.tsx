@@ -2,6 +2,9 @@ import Image from "next/image";
 import AwardSlider from '@/components/common/Slider/AwardSlider';
 import TestimonialSlider from '@/components/common/Slider/TestimonialSlider';
 import FeatureCardSlider from "@/components/common/Slider/FeatureCardSlider";
+import CardBlock from "../CardBlock";
+import VideoTestimonialSlider from "@/components/common/Slider/VideoTestimonialSlider";
+import CurrencyFlagBlock from "@/components/sections/Block/CurrencyFlagBlock";
 
 const TileBlock = ({ entry }: { entry: any }) => {
     const style = entry?.fields?.style;
@@ -82,6 +85,12 @@ const TileBlock = ({ entry }: { entry: any }) => {
         );
     }
 
+    if (style === "3 Column Product Boxes") {
+        return (
+            <CardBlock items={blocks} />
+        )
+    }
+
     if (style === "4 Column Product Boxes") {
         const sliderBreakpoints = {
             slidesPerView: 1.4,
@@ -135,6 +144,29 @@ const TileBlock = ({ entry }: { entry: any }) => {
                 </div>
             </div>
         );
+    }
+
+    if (style === "Video Slider") {
+        const videoTestimonialSliderBreakpoints = {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            centeredSlides: true,
+            breakPoints: {
+                1024: {
+                    slidesPerView: 2.5,
+                    centeredSlides: true,
+                },
+            },
+        };
+        return (
+            <VideoTestimonialSlider data={blocks} breakPoints={videoTestimonialSliderBreakpoints} />
+        )
+    }
+
+    if (style === "Currency Animation") {
+        return (
+            <CurrencyFlagBlock items={blocks} />
+        )
     }
 
     return null;

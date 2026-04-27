@@ -10,8 +10,9 @@ interface SliderProps {
     items: any[];
     slidesPerView?: number;
     spaceBetween?: number;
-    centeredSlides?: boolean;
+    initialSlide?: number;
     breakpoints?: any;
+    centeredSlides?: boolean;
     renderItem: (item: any, index: number) => React.ReactNode;
 }
 
@@ -19,8 +20,9 @@ export default function Slider({
     items,
     slidesPerView = 1,
     spaceBetween = 0,
-    centeredSlides = false,
+    initialSlide = 0,
     breakpoints,
+    centeredSlides = false,
     renderItem,
 }: SliderProps) {
     return (
@@ -30,6 +32,7 @@ export default function Slider({
                 slidesPerView={slidesPerView}
                 spaceBetween={spaceBetween}
                 centeredSlides={centeredSlides}
+                initialSlide={initialSlide}
                 breakpoints={breakpoints}
                 pagination={{
                     clickable: true,
